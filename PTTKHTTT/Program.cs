@@ -14,6 +14,7 @@ namespace PTTKHTTT
             //Application.Run(new iSignUp());
             Application.Run(new iMainUI());
             //Application.Run(new iReserveInfo());
+            Application.Run(new iSignUp());
         }
     }
 }
