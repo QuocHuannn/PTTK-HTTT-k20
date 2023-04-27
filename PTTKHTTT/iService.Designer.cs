@@ -28,196 +28,256 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            button2 = new Button();
+            button1 = new Button();
+            textBox1 = new TextBox();
+            label2 = new Label();
+            dataGridView1 = new DataGridView();
+            label1 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            dataGridView3 = new DataGridView();
+            button4 = new Button();
+            button5 = new Button();
+            button3 = new Button();
+            dataGridView2 = new DataGridView();
+            panel2 = new Panel();
+            panelCopyrightDV = new Panel();
+            label5 = new Label();
+            panel3 = new Panel();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            panel2.SuspendLayout();
+            panelCopyrightDV.SuspendLayout();
+            panel3.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(37, 36);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(564, 182);
-            this.panel1.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dataGridView2);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Location = new System.Drawing.Point(37, 259);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(564, 167);
-            this.panel2.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 37);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(504, 109);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(22, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "DÁNH SÁCH DỊCH VỤ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(15, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Thông tin dịch vụ";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(264, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 23);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "Tìm kiếm...";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(460, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Tìm kiếm";
-            this.button1.UseVisualStyleBackColor = true;
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(dataGridView1);
+            panel1.Location = new Point(42, 115);
+            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(645, 243);
+            panel1.TabIndex = 1;
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(208, 152);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(196, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Thêm vào danh sách";
-            this.button2.UseVisualStyleBackColor = true;
+            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Location = new Point(213, 202);
+            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Name = "button2";
+            button2.Size = new Size(224, 31);
+            button2.TabIndex = 4;
+            button2.Text = "Thêm vào danh sách";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(525, 14);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(86, 31);
+            button1.TabIndex = 3;
+            button1.Text = "Tìm kiếm";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(245, 18);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(274, 27);
+            textBox1.TabIndex = 2;
+            textBox1.Text = "Tìm kiếm...";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(28, 14);
+            label2.Name = "label2";
+            label2.Size = new Size(211, 28);
+            label2.TabIndex = 1;
+            label2.Text = "THÔNG TIN DỊCH VỤ";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(35, 49);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(576, 145);
+            dataGridView1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(532, 39);
+            label1.Name = "label1";
+            label1.Size = new Size(328, 41);
+            label1.TabIndex = 1;
+            label1.Text = "DANH SÁCH DỊCH VỤ";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(37, 235);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(276, 21);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "DÁNH SÁCH DỊCH VỤ ĐƯỢC CHỌN";
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(208, 132);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(196, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Xóa khỏi danh sách";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(31, 17);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(504, 109);
-            this.dataGridView2.TabIndex = 5;
+            label3.Anchor = AnchorStyles.None;
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(35, 12);
+            label3.Name = "label3";
+            label3.Size = new Size(346, 28);
+            label3.TabIndex = 2;
+            label3.Text = "DANH SÁCH DỊCH VỤ ĐƯỢC CHỌN";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(651, 7);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 21);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Thông tin chi tiết";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(903, 127);
+            label4.Name = "label4";
+            label4.Size = new Size(210, 28);
+            label4.TabIndex = 5;
+            label4.Text = "THÔNG TIN CHI TIẾT";
             // 
             // dataGridView3
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(635, 36);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowTemplate.Height = 25;
-            this.dataGridView3.Size = new System.Drawing.Size(189, 390);
-            this.dataGridView3.TabIndex = 6;
+            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView3.Location = new Point(726, 164);
+            dataGridView3.Margin = new Padding(3, 4, 3, 4);
+            dataGridView3.Name = "dataGridView3";
+            dataGridView3.RowHeadersWidth = 51;
+            dataGridView3.RowTemplate.Height = 25;
+            dataGridView3.Size = new Size(524, 391);
+            dataGridView3.TabIndex = 6;
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(693, 458);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Xác nhận";
-            this.button4.UseVisualStyleBackColor = true;
+            button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.Location = new Point(925, 563);
+            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Name = "button4";
+            button4.Size = new Size(325, 31);
+            button4.TabIndex = 5;
+            button4.Text = "Xác nhận";
+            button4.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(37, 458);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Hủy";
-            this.button5.UseVisualStyleBackColor = true;
+            button5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.Location = new Point(726, 563);
+            button5.Margin = new Padding(3, 4, 3, 4);
+            button5.Name = "button5";
+            button5.Size = new Size(134, 31);
+            button5.TabIndex = 7;
+            button5.Text = "Quay lại";
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Anchor = AnchorStyles.None;
+            button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Location = new Point(213, 197);
+            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Name = "button3";
+            button3.Size = new Size(224, 31);
+            button3.TabIndex = 5;
+            button3.Text = "Xóa khỏi danh sách";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.Anchor = AnchorStyles.None;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(35, 44);
+            dataGridView2.Margin = new Padding(3, 4, 3, 4);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 51;
+            dataGridView2.Size = new Size(576, 145);
+            dataGridView2.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            panel2.Anchor = AnchorStyles.None;
+            panel2.Controls.Add(dataGridView2);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(button3);
+            panel2.Location = new Point(42, 366);
+            panel2.Margin = new Padding(3, 4, 3, 4);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(645, 232);
+            panel2.TabIndex = 1;
+            // 
+            // panelCopyrightDV
+            // 
+            panelCopyrightDV.BackColor = Color.FromArgb(51, 51, 78);
+            panelCopyrightDV.Controls.Add(label5);
+            panelCopyrightDV.Dock = DockStyle.Bottom;
+            panelCopyrightDV.Location = new Point(0, 605);
+            panelCopyrightDV.Name = "panelCopyrightDV";
+            panelCopyrightDV.Size = new Size(1262, 68);
+            panelCopyrightDV.TabIndex = 8;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(136, 24);
+            label5.Name = "label5";
+            label5.Size = new Size(1009, 20);
+            label5.TabIndex = 0;
+            label5.Text = "Copyright © Đội ngũ tiên tiến về công nghệ, chuyên tổ chức ngủ sớm dậy trễ. Mọi quyền được quyết định bới khách sạn SLEEPING, xin cảm ơn các bạn !";
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(0, 150, 136);
+            panel3.Controls.Add(label1);
+            panel3.Dock = DockStyle.Top;
+            panel3.Location = new Point(0, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1262, 109);
+            panel3.TabIndex = 9;
             // 
             // iService
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(855, 493);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Name = "iService";
-            this.Text = "Dịch vụ";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1262, 673);
+            Controls.Add(panel3);
+            Controls.Add(panelCopyrightDV);
+            Controls.Add(button5);
+            Controls.Add(button4);
+            Controls.Add(dataGridView3);
+            Controls.Add(label4);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "iService";
+            Text = "DỊCH VỤ";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panelCopyrightDV.ResumeLayout(false);
+            panelCopyrightDV.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -228,14 +288,17 @@
         private TextBox textBox1;
         private Label label2;
         private DataGridView dataGridView1;
-        private Panel panel2;
-        private DataGridView dataGridView2;
-        private Button button3;
         private Label label1;
         private Label label3;
         private Label label4;
         private DataGridView dataGridView3;
         private Button button4;
         private Button button5;
+        private Button button3;
+        private DataGridView dataGridView2;
+        private Panel panel2;
+        private Panel panelCopyrightDV;
+        private Label label5;
+        private Panel panel3;
     }
 }

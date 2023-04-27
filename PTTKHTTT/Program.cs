@@ -13,6 +13,7 @@ namespace PTTKHTTT
             ApplicationConfiguration.Initialize();
             //Application.Run(new iSignUp());
             Application.Run(new iMainUI());
+            //Application.Run(new iReserveInfo());
         }
     }
 }

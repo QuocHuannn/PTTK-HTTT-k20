@@ -117,5 +117,12 @@ namespace PTTKHTTT
         {
             ActivateButton(sender);
         }
+
+        private void dangXuat_Btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            iSignIn dangXuat = new iSignIn();
+            dangXuat.Show();
+        }
     }
 }

@@ -30,12 +30,9 @@
         {
             label2 = new Label();
             panelTitleBar = new Panel();
+            dangXuat_Btn = new Button();
             lblTitle = new Label();
-            label1 = new Label();
             pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            vScrollBar2 = new VScrollBar();
-            vScrollBar1 = new VScrollBar();
             panelMenu = new Panel();
             panelLogo = new Panel();
             pictureBox3 = new PictureBox();
@@ -45,37 +42,31 @@
             datPhong_Btn = new Button();
             dichVu_Btn = new Button();
             bill_Btn = new Button();
-            dataGridView1 = new DataGridView();
             panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panelMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(760, 75);
+            label2.Location = new Point(739, 12);
             label2.Name = "label2";
-            label2.Size = new Size(199, 28);
+            label2.Size = new Size(188, 28);
             label2.TabIndex = 2;
-            label2.Text = "Xin chào, Username";
+            label2.Text = "Xin chào, Bùn Ngủ";
             // 
             // panelTitleBar
             // 
             panelTitleBar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
             panelTitleBar.BorderStyle = BorderStyle.FixedSingle;
+            panelTitleBar.Controls.Add(dangXuat_Btn);
             panelTitleBar.Controls.Add(lblTitle);
-            panelTitleBar.Controls.Add(label1);
             panelTitleBar.Controls.Add(pictureBox1);
-            panelTitleBar.Controls.Add(pictureBox2);
-            panelTitleBar.Controls.Add(vScrollBar2);
-            panelTitleBar.Controls.Add(vScrollBar1);
             panelTitleBar.Controls.Add(label2);
             panelTitleBar.Location = new Point(221, 0);
             panelTitleBar.Margin = new Padding(3, 4, 3, 4);
@@ -83,64 +74,43 @@
             panelTitleBar.Size = new Size(1038, 115);
             panelTitleBar.TabIndex = 1;
             // 
+            // dangXuat_Btn
+            // 
+            dangXuat_Btn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dangXuat_Btn.Image = Properties.Resources.logout1;
+            dangXuat_Btn.ImageAlign = ContentAlignment.MiddleLeft;
+            dangXuat_Btn.Location = new Point(761, 52);
+            dangXuat_Btn.Name = "dangXuat_Btn";
+            dangXuat_Btn.Size = new Size(143, 40);
+            dangXuat_Btn.TabIndex = 8;
+            dangXuat_Btn.Text = "Đăng xuất";
+            dangXuat_Btn.TextImageRelation = TextImageRelation.ImageBeforeText;
+            dangXuat_Btn.UseVisualStyleBackColor = true;
+            dangXuat_Btn.Click += dangXuat_Btn_Click;
+            // 
             // lblTitle
             // 
             lblTitle.Anchor = AnchorStyles.None;
             lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitle.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitle.ForeColor = Color.White;
-            lblTitle.Location = new Point(532, 37);
+            lblTitle.Location = new Point(415, 35);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(101, 38);
+            lblTitle.Size = new Size(218, 46);
             lblTitle.TabIndex = 7;
-            lblTitle.Text = "HOME";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(136, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(110, 28);
-            label1.TabIndex = 6;
-            label1.Text = "Đăng xuất";
+            lblTitle.Text = "TRANG CHỦ";
             // 
             // pictureBox1
             // 
             pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.Image = Properties.Resources.image;
-            pictureBox1.Location = new Point(965, 43);
+            pictureBox1.Location = new Point(948, 12);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(60, 60);
+            pictureBox1.Size = new Size(80, 80);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.download;
-            pictureBox2.Location = new Point(-1, -1);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(114, 75);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 5;
-            pictureBox2.TabStop = false;
-            // 
-            // vScrollBar2
-            // 
-            vScrollBar2.Location = new Point(199, 69);
-            vScrollBar2.Name = "vScrollBar2";
-            vScrollBar2.Size = new Size(34, 533);
-            vScrollBar2.TabIndex = 5;
-            // 
-            // vScrollBar1
-            // 
-            vScrollBar1.Location = new Point(203, 69);
-            vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(9, 536);
-            vScrollBar1.TabIndex = 4;
             // 
             // panelMenu
             // 
@@ -182,7 +152,7 @@
             // lblTeam
             // 
             lblTeam.AutoSize = true;
-            lblTeam.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTeam.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             lblTeam.ForeColor = Color.White;
             lblTeam.ImageAlign = ContentAlignment.MiddleLeft;
             lblTeam.Location = new Point(25, 8);
@@ -287,39 +257,24 @@
             bill_Btn.UseVisualStyleBackColor = true;
             bill_Btn.Click += bill_Btn_Click;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.Anchor = AnchorStyles.None;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(222, 116);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(1038, 554);
-            dataGridView1.TabIndex = 3;
-            // 
             // iMainUI
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1262, 673);
-            Controls.Add(dataGridView1);
             Controls.Add(panelMenu);
             Controls.Add(panelTitleBar);
             Margin = new Padding(3, 4, 3, 4);
             Name = "iMainUI";
-            Text = "Trang chủ";
+            Text = "TRANG CHỦ";
             Load += iMainUI_Load;
             panelTitleBar.ResumeLayout(false);
             panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panelMenu.ResumeLayout(false);
             panelLogo.ResumeLayout(false);
             panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -333,15 +288,11 @@
         private Button dichVu_Btn;
         private Button bill_Btn;
         private Button datPhong_Btn;
-        private VScrollBar vScrollBar2;
-        private VScrollBar vScrollBar1;
         private Button infoRoom_Btn;
-        private PictureBox pictureBox2;
-        private Label label1;
-        private DataGridView dataGridView1;
         private Panel panelLogo;
         private Label lblTitle;
         private Label lblTeam;
         private PictureBox pictureBox3;
+        private Button dangXuat_Btn;
     }
 }
