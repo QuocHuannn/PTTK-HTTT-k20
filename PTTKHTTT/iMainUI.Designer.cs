@@ -42,6 +42,8 @@
             datPhong_Btn = new Button();
             dichVu_Btn = new Button();
             bill_Btn = new Button();
+            panelDesktopPane = new Panel();
+            btnCloseChildForm = new Button();
             panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelMenu.SuspendLayout();
@@ -53,7 +55,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(739, 12);
+            label2.Location = new Point(960, 12);
             label2.Name = "label2";
             label2.Size = new Size(188, 28);
             label2.TabIndex = 2;
@@ -61,17 +63,18 @@
             // 
             // panelTitleBar
             // 
-            panelTitleBar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panelTitleBar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
             panelTitleBar.BorderStyle = BorderStyle.FixedSingle;
+            panelTitleBar.Controls.Add(btnCloseChildForm);
             panelTitleBar.Controls.Add(dangXuat_Btn);
             panelTitleBar.Controls.Add(lblTitle);
             panelTitleBar.Controls.Add(pictureBox1);
             panelTitleBar.Controls.Add(label2);
-            panelTitleBar.Location = new Point(221, 0);
+            panelTitleBar.Location = new Point(0, 0);
             panelTitleBar.Margin = new Padding(3, 4, 3, 4);
             panelTitleBar.Name = "panelTitleBar";
-            panelTitleBar.Size = new Size(1038, 115);
+            panelTitleBar.Size = new Size(1262, 673);
             panelTitleBar.TabIndex = 1;
             // 
             // dangXuat_Btn
@@ -79,7 +82,7 @@
             dangXuat_Btn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dangXuat_Btn.Image = Properties.Resources.logout1;
             dangXuat_Btn.ImageAlign = ContentAlignment.MiddleLeft;
-            dangXuat_Btn.Location = new Point(761, 52);
+            dangXuat_Btn.Location = new Point(989, 52);
             dangXuat_Btn.Name = "dangXuat_Btn";
             dangXuat_Btn.Size = new Size(143, 40);
             dangXuat_Btn.TabIndex = 8;
@@ -94,7 +97,7 @@
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitle.ForeColor = Color.White;
-            lblTitle.Location = new Point(415, 35);
+            lblTitle.Location = new Point(320, 40);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(218, 46);
             lblTitle.TabIndex = 7;
@@ -104,7 +107,7 @@
             // 
             pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.Image = Properties.Resources.image;
-            pictureBox1.Location = new Point(948, 12);
+            pictureBox1.Location = new Point(1169, 12);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(80, 80);
@@ -126,17 +129,16 @@
             panelMenu.Location = new Point(0, 0);
             panelMenu.Margin = new Padding(3, 4, 3, 4);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(220, 673);
+            panelMenu.Size = new Size(200, 673);
             panelMenu.TabIndex = 2;
             // 
             // panelLogo
             // 
-            panelLogo.Anchor = AnchorStyles.None;
             panelLogo.Controls.Add(pictureBox3);
             panelLogo.Controls.Add(lblTeam);
-            panelLogo.Location = new Point(0, 1);
+            panelLogo.Location = new Point(0, -1);
             panelLogo.Name = "panelLogo";
-            panelLogo.Size = new Size(220, 110);
+            panelLogo.Size = new Size(198, 113);
             panelLogo.TabIndex = 5;
             // 
             // pictureBox3
@@ -165,6 +167,7 @@
             // infoRoom_Btn
             // 
             infoRoom_Btn.Anchor = AnchorStyles.None;
+            infoRoom_Btn.FlatAppearance.BorderSize = 0;
             infoRoom_Btn.FlatStyle = FlatStyle.Flat;
             infoRoom_Btn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             infoRoom_Btn.ForeColor = Color.Gainsboro;
@@ -173,7 +176,7 @@
             infoRoom_Btn.Location = new Point(-1, 558);
             infoRoom_Btn.Margin = new Padding(3, 4, 3, 4);
             infoRoom_Btn.Name = "infoRoom_Btn";
-            infoRoom_Btn.Size = new Size(220, 110);
+            infoRoom_Btn.Size = new Size(200, 110);
             infoRoom_Btn.TabIndex = 4;
             infoRoom_Btn.Text = "Thông tin đặt phòng";
             infoRoom_Btn.TextAlign = ContentAlignment.MiddleLeft;
@@ -184,6 +187,7 @@
             // hoSo_Btn
             // 
             hoSo_Btn.Anchor = AnchorStyles.None;
+            hoSo_Btn.FlatAppearance.BorderSize = 0;
             hoSo_Btn.FlatStyle = FlatStyle.Flat;
             hoSo_Btn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             hoSo_Btn.ForeColor = Color.Gainsboro;
@@ -192,7 +196,7 @@
             hoSo_Btn.Location = new Point(-1, 114);
             hoSo_Btn.Margin = new Padding(3, 4, 3, 4);
             hoSo_Btn.Name = "hoSo_Btn";
-            hoSo_Btn.Size = new Size(220, 110);
+            hoSo_Btn.Size = new Size(200, 110);
             hoSo_Btn.TabIndex = 0;
             hoSo_Btn.Text = "Hồ sơ";
             hoSo_Btn.TextAlign = ContentAlignment.MiddleLeft;
@@ -203,6 +207,7 @@
             // datPhong_Btn
             // 
             datPhong_Btn.Anchor = AnchorStyles.None;
+            datPhong_Btn.FlatAppearance.BorderSize = 0;
             datPhong_Btn.FlatStyle = FlatStyle.Flat;
             datPhong_Btn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             datPhong_Btn.ForeColor = Color.Gainsboro;
@@ -211,7 +216,7 @@
             datPhong_Btn.Location = new Point(-1, 225);
             datPhong_Btn.Margin = new Padding(3, 4, 3, 4);
             datPhong_Btn.Name = "datPhong_Btn";
-            datPhong_Btn.Size = new Size(220, 110);
+            datPhong_Btn.Size = new Size(200, 110);
             datPhong_Btn.TabIndex = 1;
             datPhong_Btn.Text = "Đặt phòng";
             datPhong_Btn.TextAlign = ContentAlignment.MiddleLeft;
@@ -222,6 +227,7 @@
             // dichVu_Btn
             // 
             dichVu_Btn.Anchor = AnchorStyles.None;
+            dichVu_Btn.FlatAppearance.BorderSize = 0;
             dichVu_Btn.FlatStyle = FlatStyle.Flat;
             dichVu_Btn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dichVu_Btn.ForeColor = Color.Gainsboro;
@@ -230,7 +236,7 @@
             dichVu_Btn.Location = new Point(-1, 336);
             dichVu_Btn.Margin = new Padding(3, 4, 3, 4);
             dichVu_Btn.Name = "dichVu_Btn";
-            dichVu_Btn.Size = new Size(220, 110);
+            dichVu_Btn.Size = new Size(200, 110);
             dichVu_Btn.TabIndex = 3;
             dichVu_Btn.Text = "Các dịch vụ ";
             dichVu_Btn.TextAlign = ContentAlignment.MiddleLeft;
@@ -241,6 +247,7 @@
             // bill_Btn
             // 
             bill_Btn.Anchor = AnchorStyles.None;
+            bill_Btn.FlatAppearance.BorderSize = 0;
             bill_Btn.FlatStyle = FlatStyle.Flat;
             bill_Btn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             bill_Btn.ForeColor = Color.Gainsboro;
@@ -249,7 +256,7 @@
             bill_Btn.Location = new Point(-1, 447);
             bill_Btn.Margin = new Padding(3, 4, 3, 4);
             bill_Btn.Name = "bill_Btn";
-            bill_Btn.Size = new Size(220, 110);
+            bill_Btn.Size = new Size(200, 110);
             bill_Btn.TabIndex = 2;
             bill_Btn.Text = "Thanh Toán";
             bill_Btn.TextAlign = ContentAlignment.MiddleLeft;
@@ -257,11 +264,33 @@
             bill_Btn.UseVisualStyleBackColor = true;
             bill_Btn.Click += bill_Btn_Click;
             // 
+            // panelDesktopPane
+            // 
+            panelDesktopPane.Dock = DockStyle.Bottom;
+            panelDesktopPane.Location = new Point(200, 115);
+            panelDesktopPane.Name = "panelDesktopPane";
+            panelDesktopPane.Size = new Size(1062, 558);
+            panelDesktopPane.TabIndex = 3;
+            panelDesktopPane.Paint += panel1_Paint;
+            // 
+            // btnCloseChildForm
+            // 
+            btnCloseChildForm.FlatAppearance.BorderSize = 0;
+            btnCloseChildForm.FlatStyle = FlatStyle.Flat;
+            btnCloseChildForm.Image = Properties.Resources.close;
+            btnCloseChildForm.Location = new Point(232, 42);
+            btnCloseChildForm.Name = "btnCloseChildForm";
+            btnCloseChildForm.Size = new Size(40, 40);
+            btnCloseChildForm.TabIndex = 9;
+            btnCloseChildForm.UseVisualStyleBackColor = true;
+            btnCloseChildForm.Click += btnCloseChildForm_Click;
+            // 
             // iMainUI
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1262, 673);
+            Controls.Add(panelDesktopPane);
             Controls.Add(panelMenu);
             Controls.Add(panelTitleBar);
             Margin = new Padding(3, 4, 3, 4);
@@ -294,5 +323,7 @@
         private Label lblTeam;
         private PictureBox pictureBox3;
         private Button dangXuat_Btn;
+        private Panel panelDesktopPane;
+        private Button btnCloseChildForm;
     }
 }
