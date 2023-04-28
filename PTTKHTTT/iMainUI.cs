@@ -17,12 +17,14 @@ namespace PTTKHTTT
         private Button currentButton;
         private Random random;
         private int tempIndex;
+        private Form activeForm;
 
         //Constructor
         public iMainUI()
         {
             InitializeComponent();
             random = new Random();
+            btnCloseChildForm.Visible = false;
 
         }
 
@@ -53,7 +55,9 @@ namespace PTTKHTTT
                     currentButton.Font = new System.Drawing.Font("Segoe UI", 13.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     panelTitleBar.BackColor = color;
                     panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
-
+                    ThemeColor.PrimaryColor = color;
+                    ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                    btnCloseChildForm.Visible = true;
                 }
             }
         }
@@ -71,6 +75,21 @@ namespace PTTKHTTT
             }
         }
 
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            ActivateButton(btnSender);
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+
+            this.panelDesktopPane.Controls.Add(childForm);
+            this.panelDesktopPane.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            lblTitle.Text = childForm.Text;
+        }
 
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -90,7 +109,7 @@ namespace PTTKHTTT
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new iProfile(), sender);
         }
 
         private void vScrollBar3_Scroll(object sender, ScrollEventArgs e)
@@ -100,22 +119,22 @@ namespace PTTKHTTT
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new iReserveInfo(), sender);
         }
 
         private void datPhong_Btn_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            //OpenChildForm(new iBooking(), sender);
         }
 
         private void dichVu_Btn_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenChildForm(new iService(), sender);
         }
 
         private void bill_Btn_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            //OpenChildForm(new iBill(), sender);
         }
 
         private void dangXuat_Btn_Click(object sender, EventArgs e)
@@ -123,6 +142,28 @@ namespace PTTKHTTT
             this.Hide();
             iSignIn dangXuat = new iSignIn();
             dangXuat.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnCloseChildForm_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            Reset();
+        }
+
+        private void Reset()
+        {
+            DisableButton();
+            lblTitle.Text = "HOME";
+            panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
+            panelLogo.BackColor = Color.FromArgb(39, 39, 58);
+            currentButton = null;
+            btnCloseChildForm.Visible = false;
         }
     }
 }
