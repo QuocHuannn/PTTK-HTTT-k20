@@ -75,9 +75,9 @@
             textBox1.Location = new Point(259, 54);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Tìm kiếm...";
             textBox1.Size = new Size(216, 27);
             textBox1.TabIndex = 2;
-            textBox1.Text = "Tìm kiếm...";
             // 
             // label2
             // 

@@ -30,6 +30,7 @@
         {
             label2 = new Label();
             panelTitleBar = new Panel();
+            btnCloseChildForm = new Button();
             dangXuat_Btn = new Button();
             lblTitle = new Label();
             pictureBox1 = new PictureBox();
@@ -43,7 +44,6 @@
             dichVu_Btn = new Button();
             bill_Btn = new Button();
             panelDesktopPane = new Panel();
-            btnCloseChildForm = new Button();
             panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelMenu.SuspendLayout();
@@ -76,6 +76,18 @@
             panelTitleBar.Name = "panelTitleBar";
             panelTitleBar.Size = new Size(1262, 673);
             panelTitleBar.TabIndex = 1;
+            // 
+            // btnCloseChildForm
+            // 
+            btnCloseChildForm.FlatAppearance.BorderSize = 0;
+            btnCloseChildForm.FlatStyle = FlatStyle.Flat;
+            btnCloseChildForm.Image = Properties.Resources.close;
+            btnCloseChildForm.Location = new Point(232, 42);
+            btnCloseChildForm.Name = "btnCloseChildForm";
+            btnCloseChildForm.Size = new Size(40, 40);
+            btnCloseChildForm.TabIndex = 9;
+            btnCloseChildForm.UseVisualStyleBackColor = true;
+            btnCloseChildForm.Click += btnCloseChildForm_Click;
             // 
             // dangXuat_Btn
             // 
@@ -272,18 +284,6 @@
             panelDesktopPane.Size = new Size(1062, 558);
             panelDesktopPane.TabIndex = 3;
             panelDesktopPane.Paint += panel1_Paint;
-            // 
-            // btnCloseChildForm
-            // 
-            btnCloseChildForm.FlatAppearance.BorderSize = 0;
-            btnCloseChildForm.FlatStyle = FlatStyle.Flat;
-            btnCloseChildForm.Image = Properties.Resources.close;
-            btnCloseChildForm.Location = new Point(232, 42);
-            btnCloseChildForm.Name = "btnCloseChildForm";
-            btnCloseChildForm.Size = new Size(40, 40);
-            btnCloseChildForm.TabIndex = 9;
-            btnCloseChildForm.UseVisualStyleBackColor = true;
-            btnCloseChildForm.Click += btnCloseChildForm_Click;
             // 
             // iMainUI
             // 
