@@ -12,7 +12,7 @@ namespace PTTKHTTT
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new iSignUp());
-            Application.Run(new iMainUI());
+            Application.Run(new iSignIn());
             //Application.Run(new iReserveInfo());
         }
     }

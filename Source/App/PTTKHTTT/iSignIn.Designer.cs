@@ -138,6 +138,7 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Location = new System.Drawing.Point(59, 11);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(370, 16);
             this.textBox2.TabIndex = 8;
             this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
