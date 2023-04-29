@@ -28,283 +28,274 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label2 = new Label();
-            panelTitleBar = new Panel();
-            btnCloseChildForm = new Button();
-            dangXuat_Btn = new Button();
-            lblTitle = new Label();
-            pictureBox1 = new PictureBox();
-            panelMenu = new Panel();
-            panelLogo = new Panel();
-            pictureBox3 = new PictureBox();
-            lblTeam = new Label();
-            infoRoom_Btn = new Button();
-            hoSo_Btn = new Button();
-            datPhong_Btn = new Button();
-            dichVu_Btn = new Button();
-            bill_Btn = new Button();
-            panelDesktopPane = new Panel();
-            panelTitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panelMenu.SuspendLayout();
-            panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            SuspendLayout();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btnCloseChildForm = new System.Windows.Forms.Button();
+            this.dangXuat_Btn = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lblTeam = new System.Windows.Forms.Label();
+            this.infoRoom_Btn = new System.Windows.Forms.Button();
+            this.hoSo_Btn = new System.Windows.Forms.Button();
+            this.datPhong_Btn = new System.Windows.Forms.Button();
+            this.dichVu_Btn = new System.Windows.Forms.Button();
+            this.bill_Btn = new System.Windows.Forms.Button();
+            this.panelDesktopPane = new System.Windows.Forms.Panel();
+            this.panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelMenu.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.SuspendLayout();
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(960, 12);
-            label2.Name = "label2";
-            label2.Size = new Size(188, 28);
-            label2.TabIndex = 2;
-            label2.Text = "Xin chào, Bùn Ngủ";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(840, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(151, 21);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Xin chào, Bùn Ngủ";
             // 
             // panelTitleBar
             // 
-            panelTitleBar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
-            panelTitleBar.BorderStyle = BorderStyle.FixedSingle;
-            panelTitleBar.Controls.Add(btnCloseChildForm);
-            panelTitleBar.Controls.Add(dangXuat_Btn);
-            panelTitleBar.Controls.Add(lblTitle);
-            panelTitleBar.Controls.Add(pictureBox1);
-            panelTitleBar.Controls.Add(label2);
-            panelTitleBar.Location = new Point(0, 0);
-            panelTitleBar.Margin = new Padding(3, 4, 3, 4);
-            panelTitleBar.Name = "panelTitleBar";
-            panelTitleBar.Size = new Size(1262, 673);
-            panelTitleBar.TabIndex = 1;
+            this.panelTitleBar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.panelTitleBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelTitleBar.Controls.Add(this.btnCloseChildForm);
+            this.panelTitleBar.Controls.Add(this.dangXuat_Btn);
+            this.panelTitleBar.Controls.Add(this.lblTitle);
+            this.panelTitleBar.Controls.Add(this.pictureBox1);
+            this.panelTitleBar.Controls.Add(this.label2);
+            this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(1104, 505);
+            this.panelTitleBar.TabIndex = 1;
             // 
             // btnCloseChildForm
             // 
-            btnCloseChildForm.FlatAppearance.BorderSize = 0;
-            btnCloseChildForm.FlatStyle = FlatStyle.Flat;
-            btnCloseChildForm.Image = Properties.Resources.close;
-            btnCloseChildForm.Location = new Point(232, 42);
-            btnCloseChildForm.Name = "btnCloseChildForm";
-            btnCloseChildForm.Size = new Size(40, 40);
-            btnCloseChildForm.TabIndex = 9;
-            btnCloseChildForm.UseVisualStyleBackColor = true;
-            btnCloseChildForm.Click += btnCloseChildForm_Click;
+            this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
+            this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseChildForm.Image = global::PTTKHTTT.Properties.Resources.close;
+            this.btnCloseChildForm.Location = new System.Drawing.Point(203, 32);
+            this.btnCloseChildForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCloseChildForm.Name = "btnCloseChildForm";
+            this.btnCloseChildForm.Size = new System.Drawing.Size(35, 30);
+            this.btnCloseChildForm.TabIndex = 9;
+            this.btnCloseChildForm.UseVisualStyleBackColor = true;
             // 
             // dangXuat_Btn
             // 
-            dangXuat_Btn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            dangXuat_Btn.Image = Properties.Resources.logout1;
-            dangXuat_Btn.ImageAlign = ContentAlignment.MiddleLeft;
-            dangXuat_Btn.Location = new Point(989, 52);
-            dangXuat_Btn.Name = "dangXuat_Btn";
-            dangXuat_Btn.Size = new Size(143, 40);
-            dangXuat_Btn.TabIndex = 8;
-            dangXuat_Btn.Text = "Đăng xuất";
-            dangXuat_Btn.TextImageRelation = TextImageRelation.ImageBeforeText;
-            dangXuat_Btn.UseVisualStyleBackColor = true;
-            dangXuat_Btn.Click += dangXuat_Btn_Click;
+            this.dangXuat_Btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dangXuat_Btn.Image = global::PTTKHTTT.Properties.Resources.logout1;
+            this.dangXuat_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dangXuat_Btn.Location = new System.Drawing.Point(865, 39);
+            this.dangXuat_Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dangXuat_Btn.Name = "dangXuat_Btn";
+            this.dangXuat_Btn.Size = new System.Drawing.Size(125, 30);
+            this.dangXuat_Btn.TabIndex = 8;
+            this.dangXuat_Btn.Text = "Đăng xuất";
+            this.dangXuat_Btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.dangXuat_Btn.UseVisualStyleBackColor = true;
             // 
             // lblTitle
             // 
-            lblTitle.Anchor = AnchorStyles.None;
-            lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTitle.ForeColor = Color.White;
-            lblTitle.Location = new Point(320, 40);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(218, 46);
-            lblTitle.TabIndex = 7;
-            lblTitle.Text = "TRANG CHỦ";
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(280, 30);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(175, 37);
+            this.lblTitle.TabIndex = 7;
+            this.lblTitle.Text = "TRANG CHỦ";
             // 
             // pictureBox1
             // 
-            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox1.Image = Properties.Resources.image;
-            pictureBox1.Location = new Point(1169, 12);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(80, 80);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::PTTKHTTT.Properties.Resources.image;
+            this.pictureBox1.Location = new System.Drawing.Point(1023, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 60);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // panelMenu
             // 
-            panelMenu.BackColor = Color.FromArgb(51, 51, 76);
-            panelMenu.BorderStyle = BorderStyle.FixedSingle;
-            panelMenu.Controls.Add(panelLogo);
-            panelMenu.Controls.Add(infoRoom_Btn);
-            panelMenu.Controls.Add(hoSo_Btn);
-            panelMenu.Controls.Add(datPhong_Btn);
-            panelMenu.Controls.Add(dichVu_Btn);
-            panelMenu.Controls.Add(bill_Btn);
-            panelMenu.Dock = DockStyle.Left;
-            panelMenu.Location = new Point(0, 0);
-            panelMenu.Margin = new Padding(3, 4, 3, 4);
-            panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(200, 673);
-            panelMenu.TabIndex = 2;
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMenu.Controls.Add(this.panelLogo);
+            this.panelMenu.Controls.Add(this.infoRoom_Btn);
+            this.panelMenu.Controls.Add(this.hoSo_Btn);
+            this.panelMenu.Controls.Add(this.datPhong_Btn);
+            this.panelMenu.Controls.Add(this.dichVu_Btn);
+            this.panelMenu.Controls.Add(this.bill_Btn);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(175, 505);
+            this.panelMenu.TabIndex = 2;
             // 
             // panelLogo
             // 
-            panelLogo.Controls.Add(pictureBox3);
-            panelLogo.Controls.Add(lblTeam);
-            panelLogo.Location = new Point(0, -1);
-            panelLogo.Name = "panelLogo";
-            panelLogo.Size = new Size(198, 113);
-            panelLogo.TabIndex = 5;
+            this.panelLogo.Controls.Add(this.pictureBox3);
+            this.panelLogo.Controls.Add(this.lblTeam);
+            this.panelLogo.Location = new System.Drawing.Point(0, -1);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(173, 85);
+            this.panelLogo.TabIndex = 5;
             // 
             // pictureBox3
             // 
-            pictureBox3.BackgroundImage = Properties.Resources.sleeping2;
-            pictureBox3.Location = new Point(69, 43);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(70, 68);
-            pictureBox3.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox3.TabIndex = 1;
-            pictureBox3.TabStop = false;
+            this.pictureBox3.BackgroundImage = global::PTTKHTTT.Properties.Resources.sleeping2;
+            this.pictureBox3.Location = new System.Drawing.Point(60, 32);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(70, 68);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // lblTeam
             // 
-            lblTeam.AutoSize = true;
-            lblTeam.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            lblTeam.ForeColor = Color.White;
-            lblTeam.ImageAlign = ContentAlignment.MiddleLeft;
-            lblTeam.Location = new Point(25, 8);
-            lblTeam.Name = "lblTeam";
-            lblTeam.Size = new Size(173, 28);
-            lblTeam.TabIndex = 0;
-            lblTeam.Text = "TEAM 1: SLEEPING";
-            lblTeam.TextAlign = ContentAlignment.MiddleLeft;
+            this.lblTeam.AutoSize = true;
+            this.lblTeam.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblTeam.ForeColor = System.Drawing.Color.White;
+            this.lblTeam.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTeam.Location = new System.Drawing.Point(22, 6);
+            this.lblTeam.Name = "lblTeam";
+            this.lblTeam.Size = new System.Drawing.Size(141, 21);
+            this.lblTeam.TabIndex = 0;
+            this.lblTeam.Text = "TEAM 1: SLEEPING";
+            this.lblTeam.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // infoRoom_Btn
             // 
-            infoRoom_Btn.Anchor = AnchorStyles.None;
-            infoRoom_Btn.FlatAppearance.BorderSize = 0;
-            infoRoom_Btn.FlatStyle = FlatStyle.Flat;
-            infoRoom_Btn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            infoRoom_Btn.ForeColor = Color.Gainsboro;
-            infoRoom_Btn.Image = Properties.Resources.beds;
-            infoRoom_Btn.ImageAlign = ContentAlignment.MiddleLeft;
-            infoRoom_Btn.Location = new Point(-1, 558);
-            infoRoom_Btn.Margin = new Padding(3, 4, 3, 4);
-            infoRoom_Btn.Name = "infoRoom_Btn";
-            infoRoom_Btn.Size = new Size(200, 110);
-            infoRoom_Btn.TabIndex = 4;
-            infoRoom_Btn.Text = "Thông tin đặt phòng";
-            infoRoom_Btn.TextAlign = ContentAlignment.MiddleLeft;
-            infoRoom_Btn.TextImageRelation = TextImageRelation.ImageBeforeText;
-            infoRoom_Btn.UseVisualStyleBackColor = true;
-            infoRoom_Btn.Click += button3_Click;
+            this.infoRoom_Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.infoRoom_Btn.FlatAppearance.BorderSize = 0;
+            this.infoRoom_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.infoRoom_Btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.infoRoom_Btn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.infoRoom_Btn.Image = global::PTTKHTTT.Properties.Resources.beds;
+            this.infoRoom_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.infoRoom_Btn.Location = new System.Drawing.Point(-1, 418);
+            this.infoRoom_Btn.Name = "infoRoom_Btn";
+            this.infoRoom_Btn.Size = new System.Drawing.Size(175, 82);
+            this.infoRoom_Btn.TabIndex = 4;
+            this.infoRoom_Btn.Text = "Thông tin đặt phòng";
+            this.infoRoom_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.infoRoom_Btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.infoRoom_Btn.UseVisualStyleBackColor = true;
             // 
             // hoSo_Btn
             // 
-            hoSo_Btn.Anchor = AnchorStyles.None;
-            hoSo_Btn.FlatAppearance.BorderSize = 0;
-            hoSo_Btn.FlatStyle = FlatStyle.Flat;
-            hoSo_Btn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            hoSo_Btn.ForeColor = Color.Gainsboro;
-            hoSo_Btn.Image = Properties.Resources.profile_icon;
-            hoSo_Btn.ImageAlign = ContentAlignment.MiddleLeft;
-            hoSo_Btn.Location = new Point(-1, 114);
-            hoSo_Btn.Margin = new Padding(3, 4, 3, 4);
-            hoSo_Btn.Name = "hoSo_Btn";
-            hoSo_Btn.Size = new Size(200, 110);
-            hoSo_Btn.TabIndex = 0;
-            hoSo_Btn.Text = "Hồ sơ";
-            hoSo_Btn.TextAlign = ContentAlignment.MiddleLeft;
-            hoSo_Btn.TextImageRelation = TextImageRelation.ImageBeforeText;
-            hoSo_Btn.UseVisualStyleBackColor = true;
-            hoSo_Btn.Click += button1_Click;
+            this.hoSo_Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.hoSo_Btn.FlatAppearance.BorderSize = 0;
+            this.hoSo_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hoSo_Btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.hoSo_Btn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.hoSo_Btn.Image = global::PTTKHTTT.Properties.Resources.profile_icon;
+            this.hoSo_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.hoSo_Btn.Location = new System.Drawing.Point(-1, 86);
+            this.hoSo_Btn.Name = "hoSo_Btn";
+            this.hoSo_Btn.Size = new System.Drawing.Size(175, 82);
+            this.hoSo_Btn.TabIndex = 0;
+            this.hoSo_Btn.Text = "Hồ sơ";
+            this.hoSo_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.hoSo_Btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.hoSo_Btn.UseVisualStyleBackColor = true;
             // 
             // datPhong_Btn
             // 
-            datPhong_Btn.Anchor = AnchorStyles.None;
-            datPhong_Btn.FlatAppearance.BorderSize = 0;
-            datPhong_Btn.FlatStyle = FlatStyle.Flat;
-            datPhong_Btn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            datPhong_Btn.ForeColor = Color.Gainsboro;
-            datPhong_Btn.Image = Properties.Resources.booking;
-            datPhong_Btn.ImageAlign = ContentAlignment.MiddleLeft;
-            datPhong_Btn.Location = new Point(-1, 225);
-            datPhong_Btn.Margin = new Padding(3, 4, 3, 4);
-            datPhong_Btn.Name = "datPhong_Btn";
-            datPhong_Btn.Size = new Size(200, 110);
-            datPhong_Btn.TabIndex = 1;
-            datPhong_Btn.Text = "Đặt phòng";
-            datPhong_Btn.TextAlign = ContentAlignment.MiddleLeft;
-            datPhong_Btn.TextImageRelation = TextImageRelation.ImageBeforeText;
-            datPhong_Btn.UseVisualStyleBackColor = true;
-            datPhong_Btn.Click += datPhong_Btn_Click;
+            this.datPhong_Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.datPhong_Btn.FlatAppearance.BorderSize = 0;
+            this.datPhong_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.datPhong_Btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.datPhong_Btn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.datPhong_Btn.Image = global::PTTKHTTT.Properties.Resources.booking;
+            this.datPhong_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.datPhong_Btn.Location = new System.Drawing.Point(-1, 169);
+            this.datPhong_Btn.Name = "datPhong_Btn";
+            this.datPhong_Btn.Size = new System.Drawing.Size(175, 82);
+            this.datPhong_Btn.TabIndex = 1;
+            this.datPhong_Btn.Text = "Đặt phòng";
+            this.datPhong_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.datPhong_Btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.datPhong_Btn.UseVisualStyleBackColor = true;
             // 
             // dichVu_Btn
             // 
-            dichVu_Btn.Anchor = AnchorStyles.None;
-            dichVu_Btn.FlatAppearance.BorderSize = 0;
-            dichVu_Btn.FlatStyle = FlatStyle.Flat;
-            dichVu_Btn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            dichVu_Btn.ForeColor = Color.Gainsboro;
-            dichVu_Btn.Image = Properties.Resources.room_service;
-            dichVu_Btn.ImageAlign = ContentAlignment.MiddleLeft;
-            dichVu_Btn.Location = new Point(-1, 336);
-            dichVu_Btn.Margin = new Padding(3, 4, 3, 4);
-            dichVu_Btn.Name = "dichVu_Btn";
-            dichVu_Btn.Size = new Size(200, 110);
-            dichVu_Btn.TabIndex = 3;
-            dichVu_Btn.Text = "Các dịch vụ ";
-            dichVu_Btn.TextAlign = ContentAlignment.MiddleLeft;
-            dichVu_Btn.TextImageRelation = TextImageRelation.ImageBeforeText;
-            dichVu_Btn.UseVisualStyleBackColor = true;
-            dichVu_Btn.Click += dichVu_Btn_Click;
+            this.dichVu_Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dichVu_Btn.FlatAppearance.BorderSize = 0;
+            this.dichVu_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dichVu_Btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dichVu_Btn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.dichVu_Btn.Image = global::PTTKHTTT.Properties.Resources.room_service;
+            this.dichVu_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dichVu_Btn.Location = new System.Drawing.Point(-1, 252);
+            this.dichVu_Btn.Name = "dichVu_Btn";
+            this.dichVu_Btn.Size = new System.Drawing.Size(175, 82);
+            this.dichVu_Btn.TabIndex = 3;
+            this.dichVu_Btn.Text = "Các dịch vụ ";
+            this.dichVu_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dichVu_Btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.dichVu_Btn.UseVisualStyleBackColor = true;
             // 
             // bill_Btn
             // 
-            bill_Btn.Anchor = AnchorStyles.None;
-            bill_Btn.FlatAppearance.BorderSize = 0;
-            bill_Btn.FlatStyle = FlatStyle.Flat;
-            bill_Btn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            bill_Btn.ForeColor = Color.Gainsboro;
-            bill_Btn.Image = Properties.Resources.bill;
-            bill_Btn.ImageAlign = ContentAlignment.MiddleLeft;
-            bill_Btn.Location = new Point(-1, 447);
-            bill_Btn.Margin = new Padding(3, 4, 3, 4);
-            bill_Btn.Name = "bill_Btn";
-            bill_Btn.Size = new Size(200, 110);
-            bill_Btn.TabIndex = 2;
-            bill_Btn.Text = "Thanh Toán";
-            bill_Btn.TextAlign = ContentAlignment.MiddleLeft;
-            bill_Btn.TextImageRelation = TextImageRelation.ImageBeforeText;
-            bill_Btn.UseVisualStyleBackColor = true;
-            bill_Btn.Click += bill_Btn_Click;
+            this.bill_Btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bill_Btn.FlatAppearance.BorderSize = 0;
+            this.bill_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bill_Btn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bill_Btn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.bill_Btn.Image = global::PTTKHTTT.Properties.Resources.bill;
+            this.bill_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bill_Btn.Location = new System.Drawing.Point(-1, 335);
+            this.bill_Btn.Name = "bill_Btn";
+            this.bill_Btn.Size = new System.Drawing.Size(175, 82);
+            this.bill_Btn.TabIndex = 2;
+            this.bill_Btn.Text = "Thanh Toán";
+            this.bill_Btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bill_Btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.bill_Btn.UseVisualStyleBackColor = true;
             // 
             // panelDesktopPane
             // 
-            panelDesktopPane.Dock = DockStyle.Bottom;
-            panelDesktopPane.Location = new Point(200, 115);
-            panelDesktopPane.Name = "panelDesktopPane";
-            panelDesktopPane.Size = new Size(1062, 558);
-            panelDesktopPane.TabIndex = 3;
-            panelDesktopPane.Paint += panel1_Paint;
+            this.panelDesktopPane.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelDesktopPane.Location = new System.Drawing.Point(175, 87);
+            this.panelDesktopPane.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelDesktopPane.Name = "panelDesktopPane";
+            this.panelDesktopPane.Size = new System.Drawing.Size(929, 418);
+            this.panelDesktopPane.TabIndex = 3;
             // 
             // iMainUI
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1262, 673);
-            Controls.Add(panelDesktopPane);
-            Controls.Add(panelMenu);
-            Controls.Add(panelTitleBar);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "iMainUI";
-            Text = "TRANG CHỦ";
-            Load += iMainUI_Load;
-            panelTitleBar.ResumeLayout(false);
-            panelTitleBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panelMenu.ResumeLayout(false);
-            panelLogo.ResumeLayout(false);
-            panelLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1104, 505);
+            this.Controls.Add(this.panelDesktopPane);
+            this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.panelTitleBar);
+            this.Name = "iMainUI";
+            this.Text = "TRANG CHỦ";
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelTitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelMenu.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

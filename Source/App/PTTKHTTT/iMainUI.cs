@@ -165,5 +165,10 @@ namespace PTTKHTTT
             currentButton = null;
             btnCloseChildForm.Visible = false;
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
