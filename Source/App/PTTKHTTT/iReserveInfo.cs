@@ -41,6 +41,15 @@ namespace PTTKHTTT
                 }
             }
             label6.ForeColor = ThemeColor.PrimaryColor;
+            label2.ForeColor = ThemeColor.PrimaryColor;
+            label3.ForeColor = ThemeColor.PrimaryColor;
+            label4.ForeColor = ThemeColor.PrimaryColor;
+            label5.ForeColor = ThemeColor.PrimaryColor;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

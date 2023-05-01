@@ -40,16 +40,14 @@
             button5 = new Button();
             button3 = new Button();
             dataGridView2 = new DataGridView();
-            panelCopyrightDV = new Panel();
-            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            panelCopyrightDV.SuspendLayout();
             SuspendLayout();
             // 
             // button2
             // 
+            button2.Anchor = AnchorStyles.None;
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button2.Location = new Point(339, 216);
             button2.Margin = new Padding(3, 4, 3, 4);
@@ -61,6 +59,7 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.None;
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button1.Location = new Point(481, 55);
             button1.Margin = new Padding(3, 4, 3, 4);
@@ -72,6 +71,7 @@
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.None;
             textBox1.Location = new Point(259, 54);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
@@ -81,6 +81,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(42, 50);
@@ -91,6 +92,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(42, 94);
             dataGridView1.Margin = new Padding(3, 4, 3, 4);
@@ -112,6 +114,7 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(634, 50);
@@ -122,6 +125,7 @@
             // 
             // dataGridView3
             // 
+            dataGridView3.Anchor = AnchorStyles.None;
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView3.Location = new Point(634, 94);
             dataGridView3.Margin = new Padding(3, 4, 3, 4);
@@ -133,6 +137,7 @@
             // 
             // button4
             // 
+            button4.Anchor = AnchorStyles.None;
             button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button4.Location = new Point(784, 429);
             button4.Margin = new Padding(3, 4, 3, 4);
@@ -144,6 +149,7 @@
             // 
             // button5
             // 
+            button5.Anchor = AnchorStyles.None;
             button5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button5.Location = new Point(634, 429);
             button5.Margin = new Padding(3, 4, 3, 4);
@@ -176,27 +182,6 @@
             dataGridView2.Size = new Size(521, 114);
             dataGridView2.TabIndex = 5;
             // 
-            // panelCopyrightDV
-            // 
-            panelCopyrightDV.BackColor = Color.FromArgb(51, 51, 78);
-            panelCopyrightDV.Controls.Add(label5);
-            panelCopyrightDV.Dock = DockStyle.Bottom;
-            panelCopyrightDV.Location = new Point(0, 476);
-            panelCopyrightDV.Name = "panelCopyrightDV";
-            panelCopyrightDV.Size = new Size(1060, 85);
-            panelCopyrightDV.TabIndex = 8;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(63, 34);
-            label5.Name = "label5";
-            label5.Size = new Size(926, 20);
-            label5.TabIndex = 0;
-            label5.Text = "Copyright © Đội ngũ tiên tiến về công nghệ, chuyên tổ chức ngủ sớm dậy trễ. Mọi quyền được quyết định bởi khách sạn SLEEPING !";
-            // 
             // iService
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -209,7 +194,6 @@
             Controls.Add(label3);
             Controls.Add(dataGridView2);
             Controls.Add(dataGridView1);
-            Controls.Add(panelCopyrightDV);
             Controls.Add(button5);
             Controls.Add(button3);
             Controls.Add(button4);
@@ -222,8 +206,6 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            panelCopyrightDV.ResumeLayout(false);
-            panelCopyrightDV.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -241,7 +223,5 @@
         private Button button5;
         private Button button3;
         private DataGridView dataGridView2;
-        private Panel panelCopyrightDV;
-        private Label label5;
     }
 }

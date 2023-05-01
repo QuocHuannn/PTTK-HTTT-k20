@@ -41,15 +41,13 @@
             label6 = new Label();
             button1 = new Button();
             button2 = new Button();
-            panel3 = new Panel();
-            lblCopyright = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(11, 97);
@@ -60,6 +58,7 @@
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.None;
             textBox1.Location = new Point(184, 98);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
@@ -68,6 +67,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(11, 167);
@@ -78,6 +78,7 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(11, 240);
@@ -88,6 +89,7 @@
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label5.Location = new Point(11, 312);
@@ -98,6 +100,7 @@
             // 
             // textBox2
             // 
+            textBox2.Anchor = AnchorStyles.None;
             textBox2.Location = new Point(184, 168);
             textBox2.Margin = new Padding(3, 4, 3, 4);
             textBox2.Name = "textBox2";
@@ -106,6 +109,7 @@
             // 
             // textBox3
             // 
+            textBox3.Anchor = AnchorStyles.None;
             textBox3.Location = new Point(184, 241);
             textBox3.Margin = new Padding(3, 4, 3, 4);
             textBox3.Name = "textBox3";
@@ -114,6 +118,7 @@
             // 
             // textBox4
             // 
+            textBox4.Anchor = AnchorStyles.None;
             textBox4.Location = new Point(184, 313);
             textBox4.Margin = new Padding(3, 4, 3, 4);
             textBox4.Name = "textBox4";
@@ -122,15 +127,17 @@
             // 
             // panel2
             // 
+            panel2.Anchor = AnchorStyles.None;
             panel2.Controls.Add(dataGridView1);
             panel2.Location = new Point(515, 97);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(700, 321);
+            panel2.Size = new Size(533, 321);
             panel2.TabIndex = 11;
             // 
             // dataGridView1
             // 
+            dataGridView1.Anchor = AnchorStyles.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
@@ -141,6 +148,7 @@
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
             label6.Location = new Point(515, 61);
@@ -151,6 +159,7 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.None;
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button1.Location = new Point(11, 387);
             button1.Margin = new Padding(3, 4, 3, 4);
@@ -163,6 +172,7 @@
             // 
             // button2
             // 
+            button2.Anchor = AnchorStyles.None;
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button2.Location = new Point(184, 387);
             button2.Name = "button2";
@@ -171,33 +181,11 @@
             button2.Text = "Tìm kiếm";
             button2.UseVisualStyleBackColor = true;
             // 
-            // panel3
-            // 
-            panel3.BackColor = Color.FromArgb(51, 51, 76);
-            panel3.Controls.Add(lblCopyright);
-            panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 476);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1060, 85);
-            panel3.TabIndex = 16;
-            // 
-            // lblCopyright
-            // 
-            lblCopyright.AutoSize = true;
-            lblCopyright.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lblCopyright.ForeColor = Color.White;
-            lblCopyright.Location = new Point(47, 33);
-            lblCopyright.Name = "lblCopyright";
-            lblCopyright.Size = new Size(926, 20);
-            lblCopyright.TabIndex = 0;
-            lblCopyright.Text = "Copyright © Đội ngũ tiên tiến về công nghệ, chuyên tổ chức ngủ sớm dậy trễ. Mọi quyền được quyết định bởi khách sạn SLEEPING !";
-            // 
             // iReserveInfo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1060, 561);
-            Controls.Add(panel3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label6);
@@ -216,8 +204,6 @@
             Load += iReserveInfo_Load;
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -236,7 +222,5 @@
         private Button button1;
         private DataGridView dataGridView1;
         private Button button2;
-        private Panel panel3;
-        private Label lblCopyright;
     }
 }
