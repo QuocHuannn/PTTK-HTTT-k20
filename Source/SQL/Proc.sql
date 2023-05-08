@@ -1,37 +1,38 @@
-﻿CREATE PROCEDURE CreateNewUser 
-    @Username nvarchar(50), 
-    @Password nvarchar(50)
+﻿--- Cập nhật thông tin trong bảng Khách hàng ---
+CREATE OR ALTER PROCEDURE UpdateKhachHang 
+  @MaKH INT,
+  @HoTen NVARCHAR(100),
+  @Sdt NVARCHAR(20),
+  @CMND NVARCHAR(20),
+  @GioiTinh NVARCHAR(10),
+  @DiaChi NVARCHAR(200)
 AS
 BEGIN
-    DECLARE @SQL nvarchar(MAX)
+  IF EXISTS (SELECT * FROM KhachHang WHERE Sdt = @Sdt AND MaKH != @MaKH)
+  BEGIN
+    RAISERROR('Số điện thoại đã tồn tại', 16, 1)
+    RETURN;
+  END
+  
+  IF EXISTS (SELECT * FROM KhachHang WHERE CMND = @CMND AND MaKH != @MaKH)
+  BEGIN
+    RAISERROR('CMND đã tồn tại', 16, 1)
+    RETURN;
+  END
 
-    -- Kiểm tra xem username đã tồn tại chưa
-    IF EXISTS (SELECT * FROM sys.server_principals WHERE name = @Username)
-    BEGIN
-        RAISERROR(N'Đã tồn tại tài', 16, 1)
-        RETURN
-    END
-
-    -- Tạo login
-    SET @SQL = 'CREATE LOGIN ' + QUOTENAME(@Username) + ' WITH PASSWORD = ' + QUOTENAME(@Password, '''')
-    EXEC sp_executesql @SQL
-
-    --- Thêm MaKH
-    DECLARE @MaKH INT
-    SELECT @MaKH = COALESCE(MAX(MaKH), 0) + 1 FROM KhachHang
-
-    -- Thêm tài khoản vào bảng Account
-    INSERT INTO account (username, pass) VALUES (@username, @password)
-
-    -- Thêm KhachHang mới
-    INSERT INTO KhachHang (MaKH) VALUES (@MaKH)
-
-    -- Tạo user và phân quyền
-    SET @SQL = 'USE [QLKhachSan] 
-                CREATE USER ' + QUOTENAME(@Username) + ' FOR LOGIN ' + QUOTENAME(@Username) + '
-                EXEC sp_addrolemember ''db_datareader'', ' + QUOTENAME(@Username) + '
-                EXEC sp_addrolemember ''db_datawriter'', ' + QUOTENAME(@Username)
-    EXEC sp_executesql @SQL
+  UPDATE KhachHang
+  SET HoTen = @HoTen,
+      Sdt = @Sdt,
+      CMND = @CMND,
+      GioiTinh = @GioiTinh,
+      DiaChi = @DiaChi
+  WHERE MaKH = @MaKH
 END
-
-EXEC CreateNewUser 'Creatine', '123123' 
+--Select * from KhachHang
+EXEC UpdateKhachHang 
+    @MaKH = 1,
+    @HoTen = N'Test đổi tên',
+    @Sdt = N'0979787519',
+    @CMND = N'123456788',
+    @GioiTinh = N'nam',
+    @DiaChi = N'227 Nguyễn Văn Cừ'
