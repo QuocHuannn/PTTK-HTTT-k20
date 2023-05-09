@@ -8,6 +8,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace PTTKHTTT
 {
@@ -19,16 +22,25 @@ namespace PTTKHTTT
         private int tempIndex;
         private Form activeForm;
 
-    //Constructor
-    public iMainUI()
+
+        //Make connection into DB
+        SqlConnection _connection = null;
+        SqlCommand _command = null;
+        String _connectionString = "";
+
+
+        //Constructor
+            public iMainUI()
         {
             InitializeComponent();
             random = new Random();
             btnCloseChildForm.Visible = false;
             this.Text = string.Empty;
             this.ControlBox = false;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;          
-    }
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
+            _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
+        }
 
 [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -142,6 +154,19 @@ namespace PTTKHTTT
         private void bill_Btn_Click(object sender, EventArgs e)
         {
             //OpenChildForm(new iBill(), sender);
+            _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
+            _connection = new SqlConnection(_connectionString);
+            _connection.Open();
+
+            if (_connection.State == ConnectionState.Open)
+            {
+                Debug.WriteLine("Kết nối DB thành công");
+            }
+            else
+            {
+                Debug.WriteLine("Kết nối DB thất bại");
+            }
+            _connection.Close();
         }
 
         private void dangXuat_Btn_Click(object sender, EventArgs e)

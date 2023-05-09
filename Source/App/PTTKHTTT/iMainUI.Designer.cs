@@ -85,7 +85,6 @@
             panelTitleBar.Name = "panelTitleBar";
             panelTitleBar.Size = new Size(1062, 113);
             panelTitleBar.TabIndex = 1;
-            panelTitleBar.MouseDown += panelTitleBar_MouseDown;
             // 
             // panel1
             // 
