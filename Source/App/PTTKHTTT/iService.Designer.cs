@@ -28,56 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button2 = new Button();
-            button1 = new Button();
-            textBox1 = new TextBox();
+            addService_Btn = new Button();
+            findService_Btn = new Button();
+            find_txt = new TextBox();
             label2 = new Label();
-            dataGridView1 = new DataGridView();
+            infoByName_dataGridView = new DataGridView();
             label3 = new Label();
             label4 = new Label();
             infoService_dataGridView = new DataGridView();
             confirm_Btn = new Button();
             button5 = new Button();
             button3 = new Button();
-            dataGridView2 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            addedService_dataGridView = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)infoByName_dataGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)infoService_dataGridView).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)addedService_dataGridView).BeginInit();
             SuspendLayout();
             // 
-            // button2
+            // addService_Btn
             // 
-            button2.Anchor = AnchorStyles.None;
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(339, 216);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(224, 31);
-            button2.TabIndex = 4;
-            button2.Text = "Thêm vào danh sách";
-            button2.UseVisualStyleBackColor = true;
+            addService_Btn.Anchor = AnchorStyles.None;
+            addService_Btn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            addService_Btn.Location = new Point(339, 216);
+            addService_Btn.Margin = new Padding(3, 4, 3, 4);
+            addService_Btn.Name = "addService_Btn";
+            addService_Btn.Size = new Size(224, 31);
+            addService_Btn.TabIndex = 4;
+            addService_Btn.Text = "Thêm vào danh sách";
+            addService_Btn.UseVisualStyleBackColor = true;
+            addService_Btn.Click += addService_Btn_Click;
             // 
-            // button1
+            // findService_Btn
             // 
-            button1.Anchor = AnchorStyles.None;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(481, 55);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(82, 31);
-            button1.TabIndex = 3;
-            button1.Text = "Tìm kiếm";
-            button1.UseVisualStyleBackColor = true;
+            findService_Btn.Anchor = AnchorStyles.None;
+            findService_Btn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            findService_Btn.Location = new Point(481, 55);
+            findService_Btn.Margin = new Padding(3, 4, 3, 4);
+            findService_Btn.Name = "findService_Btn";
+            findService_Btn.Size = new Size(82, 31);
+            findService_Btn.TabIndex = 3;
+            findService_Btn.Text = "Tìm kiếm";
+            findService_Btn.UseVisualStyleBackColor = true;
+            findService_Btn.Click += findService_Btn_Click;
             // 
-            // textBox1
+            // find_txt
             // 
-            textBox1.Anchor = AnchorStyles.None;
-            textBox1.Location = new Point(259, 54);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Tìm kiếm...";
-            textBox1.Size = new Size(216, 27);
-            textBox1.TabIndex = 2;
+            find_txt.Anchor = AnchorStyles.None;
+            find_txt.Location = new Point(259, 54);
+            find_txt.Margin = new Padding(3, 4, 3, 4);
+            find_txt.Name = "find_txt";
+            find_txt.PlaceholderText = "Tìm kiếm...";
+            find_txt.Size = new Size(216, 27);
+            find_txt.TabIndex = 2;
             // 
             // label2
             // 
@@ -90,16 +92,16 @@
             label2.TabIndex = 1;
             label2.Text = "THÔNG TIN DỊCH VỤ";
             // 
-            // dataGridView1
+            // infoByName_dataGridView
             // 
-            dataGridView1.Anchor = AnchorStyles.None;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(42, 94);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(521, 114);
-            dataGridView1.TabIndex = 0;
+            infoByName_dataGridView.Anchor = AnchorStyles.None;
+            infoByName_dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            infoByName_dataGridView.Location = new Point(42, 94);
+            infoByName_dataGridView.Margin = new Padding(3, 4, 3, 4);
+            infoByName_dataGridView.Name = "infoByName_dataGridView";
+            infoByName_dataGridView.RowHeadersWidth = 51;
+            infoByName_dataGridView.Size = new Size(521, 114);
+            infoByName_dataGridView.TabIndex = 0;
             // 
             // label3
             // 
@@ -173,16 +175,16 @@
             button3.Text = "Xóa khỏi danh sách";
             button3.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // addedService_dataGridView
             // 
-            dataGridView2.Anchor = AnchorStyles.None;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(42, 307);
-            dataGridView2.Margin = new Padding(3, 4, 3, 4);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(521, 114);
-            dataGridView2.TabIndex = 5;
+            addedService_dataGridView.Anchor = AnchorStyles.None;
+            addedService_dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            addedService_dataGridView.Location = new Point(42, 307);
+            addedService_dataGridView.Margin = new Padding(3, 4, 3, 4);
+            addedService_dataGridView.Name = "addedService_dataGridView";
+            addedService_dataGridView.RowHeadersWidth = 51;
+            addedService_dataGridView.Size = new Size(521, 114);
+            addedService_dataGridView.TabIndex = 5;
             // 
             // iService
             // 
@@ -190,12 +192,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1060, 561);
             Controls.Add(label2);
-            Controls.Add(button1);
-            Controls.Add(button2);
-            Controls.Add(textBox1);
+            Controls.Add(findService_Btn);
+            Controls.Add(addService_Btn);
+            Controls.Add(find_txt);
             Controls.Add(label3);
-            Controls.Add(dataGridView2);
-            Controls.Add(dataGridView1);
+            Controls.Add(addedService_dataGridView);
+            Controls.Add(infoByName_dataGridView);
             Controls.Add(button5);
             Controls.Add(button3);
             Controls.Add(confirm_Btn);
@@ -205,25 +207,25 @@
             Name = "iService";
             Text = "DỊCH VỤ";
             Load += iService_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)infoByName_dataGridView).EndInit();
             ((System.ComponentModel.ISupportInitialize)infoService_dataGridView).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)addedService_dataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Button button2;
-        private Button button1;
-        private TextBox textBox1;
+        private Button addService_Btn;
+        private Button findService_Btn;
+        private TextBox find_txt;
         private Label label2;
-        private DataGridView dataGridView1;
+        private DataGridView infoByName_dataGridView;
         private Label label3;
         private Label label4;
         private DataGridView infoService_dataGridView;
         private Button confirm_Btn;
         private Button button5;
         private Button button3;
-        private DataGridView dataGridView2;
+        private DataGridView addedService_dataGridView;
     }
 }
