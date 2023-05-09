@@ -2,13 +2,21 @@
 --------------------------------------
 USE QLKhachSan
 ------------ Create Table ------------
+CREATE TABLE Account (
+   ID INT IDENTITY(1,1) PRIMARY KEY,
+   Username VARCHAR(50) UNIQUE NOT NULL,
+   Pass VARCHAR(255) NOT NULL
+);
+
 CREATE TABLE KhachHang (
    MaKH INT IDENTITY(1,1) PRIMARY KEY,
+   AccountID INT,
    HoTen NVARCHAR(100),
    DiaChi NVARCHAR(200),
    GioiTinh NVARCHAR(10),
    Sdt NVARCHAR(20) UNIQUE,
-   CMND NVARCHAR(20) UNIQUE  
+   CMND NVARCHAR(20) UNIQUE,
+   CONSTRAINT FK_KhachHang_AccountID FOREIGN KEY (AccountID) REFERENCES Account(ID)
 );
 
 CREATE TABLE Phong (
@@ -63,13 +71,6 @@ CREATE TABLE HoaDon (
    CONSTRAINT FK_HoaDon_MaDatPhong FOREIGN KEY (MaDatPhong) REFERENCES ChiTietDatPhong(MaDatPhong)
 );
 
-CREATE TABLE Account (
-   Id INT IDENTITY(1,1) PRIMARY KEY,
-   Username VARCHAR(50) UNIQUE NOT NULL,
-   Pass VARCHAR(255) NOT NULL,
-   MaKH INT,
-   CONSTRAINT FK_Account_KhachHang FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH)
-);
 
 
 ------------ Inserted ------------
@@ -141,5 +142,12 @@ VALUES
 (403, N'Phòng view đẹp', N'View đẹp', N'Đã đặt', 110000),
 (404, N'Phòng gia đình', N'Gần cửa hàng tiện lợi', N'Đang sử dụng', 130000),
 (405, N'Phòng President', N'Gần sân golf', N'Trống', 2100000);
+--------------
+Insert Into Account(Username, Pass) VALUES ('DemoPro','123' )
+UPDATE KhachHang
+SET AccountID = 1
+WHERE MaKH = 1
+----------------
+select * from account 
 
-  
+
