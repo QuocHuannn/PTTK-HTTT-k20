@@ -57,30 +57,70 @@ namespace PTTKHTTT
 
         private void confirm_Btn_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void findService_Btn_Click(object sender, EventArgs e)
+        {
             _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
             _connection = new SqlConnection(_connectionString);
             _connection.Open();
 
             if (_connection.State == ConnectionState.Open)
             {
-                Console.WriteLine("Kết nối DB thành công");
+                Debug.WriteLine("Kết nối DB thành công");
             }
             else
             {
-                Console.WriteLine("Kết nối DB thất bại");
+                Debug.WriteLine("Kết nối DB thất bại");
             }
 
             //Bước 2: Xây dựng câu lệnh SQL để thực hiện chức năng mong muốn
-            //string keyword = txtbMaDoiTac.Text;
-            //string keyword2 = txtbGiaMon.Text;
+            string keyword = find_txt.Text;
+
+            String sql = "exec ShowDichVuByTen " + " @TenDichVu =N'" + keyword + "'";
 
 
+            //Bước 3: Tạo đối tượng thực thi câu lệnh SQL
+            SqlDataAdapter adapt = new SqlDataAdapter(sql, _connection);
+            DataSet dts = new DataSet();
 
-            //String sql = "exec T1_demo " + " @GiaMon ='" + keyword2 + "', @MaDoiTac_demo = '" + keyword + "'";
+            adapt.Fill(dts);
+
+            if (dts.Tables.Count > 0)
+            {
+                //Dua du lieu vao combo_box
+                infoByName_dataGridView.DataSource = dts.Tables[0];
+            }
+            _connection.Close();
+
+        }
+
+        private void addService_Btn_Click(object sender, EventArgs e)
+        {
+            _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
+            _connection = new SqlConnection(_connectionString);
+            _connection.Open();
+
+            if (_connection.State == ConnectionState.Open)
+            {
+                Debug.WriteLine("Kết nối DB thành công");
+            }
+            else
+            {
+                Debug.WriteLine("Kết nối DB thất bại");
+            }
+
+            //Bước 2: Xây dựng câu lệnh SQL để thực hiện chức năng mong muốn
+            string keyword = find_txt.Text;
+            string keyword2 = find_txt.Text;
+            string keyword3 = find_txt.Text;
+
+            String sql = "exec ThemDichVuVaoDatPhong " + " @MaDatPhong = " + keyword + ", @MaDichVu = " + keyword2 + ", @SoLuong = " + keyword3;
             //String sql2 = "select * from dbo.ChiTietTHucDon where MaDoiTac = '" + keyword + "'";
             //String sql = "update Phong set TenPhong = 'Phòng đơn' where MaPhong = 101;";
 
-            String sql = "exec ShowDichVuByTen N'giặt là'";
+            //String sql = "exec ShowDichVuByTen N'giặt là'";
 
 
             //Bước 3: Tạo đối tượng thực thi câu lệnh SQL
@@ -95,7 +135,7 @@ namespace PTTKHTTT
             if (dts.Tables.Count > 0)
             {
                 //Dua du lieu vao combo_box
-                infoService_dataGridView.DataSource = dts.Tables[0];
+                infoByName_dataGridView.DataSource = dts.Tables[0];
             }
             //if (dts2.Tables.Count > 0)
             //{
@@ -103,8 +143,7 @@ namespace PTTKHTTT
             //    //Dua du lieu vao combo_box
             //    gridView2.DataSource = dts2.Tables[0];
             //}
-
-
+            _connection.Close();
         }
     }
 }
