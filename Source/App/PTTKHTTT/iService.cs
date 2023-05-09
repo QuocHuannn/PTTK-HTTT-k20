@@ -10,7 +10,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-using System.Data.SqlClient;
 using System.Diagnostics;
 
 namespace PTTKHTTT
@@ -27,7 +26,7 @@ namespace PTTKHTTT
         {
             InitializeComponent();
 
-            _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
+            _connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
         }
         private void iService_Load(object sender, EventArgs e)
         {
@@ -62,7 +61,7 @@ namespace PTTKHTTT
 
         private void findService_Btn_Click(object sender, EventArgs e)
         {
-            _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
+            _connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
             _connection = new SqlConnection(_connectionString);
             _connection.Open();
 
@@ -84,21 +83,21 @@ namespace PTTKHTTT
             //Bước 3: Tạo đối tượng thực thi câu lệnh SQL
             SqlDataAdapter adapt = new SqlDataAdapter(sql, _connection);
             DataSet dts = new DataSet();
-
-            adapt.Fill(dts);
-
             if (dts.Tables.Count > 0)
             {
                 //Dua du lieu vao combo_box
                 infoByName_dataGridView.DataSource = dts.Tables[0];
             }
+            adapt.Fill(dts);
+
+           
             _connection.Close();
 
         }
 
         private void addService_Btn_Click(object sender, EventArgs e)
         {
-            _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
+            _connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
             _connection = new SqlConnection(_connectionString);
             _connection.Open();
 
