@@ -115,29 +115,28 @@ namespace PTTKHTTT
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new iProfile(), sender);
-        }
-
         private void vScrollBar3_Scroll(object sender, ScrollEventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new iReserveInfo(), sender);
-        }
-
         private void datPhong_Btn_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new iBooking(), sender);
+            OpenChildForm(new iReserve(), sender);
         }
 
         private void dichVu_Btn_Click(object sender, EventArgs e)
         {
             OpenChildForm(new iService(), sender);
+        }
+        private void hoSo_Btn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new iProfile(), sender);
+        }
+
+        private void infoRoom_Btn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new iReserveInfo(), sender);
         }
 
         private void bill_Btn_Click(object sender, EventArgs e)
@@ -180,11 +179,6 @@ namespace PTTKHTTT
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void btnMaximize_Click(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal)
@@ -196,6 +190,11 @@ namespace PTTKHTTT
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

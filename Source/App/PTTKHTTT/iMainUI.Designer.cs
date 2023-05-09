@@ -144,7 +144,7 @@
             btnClose.TabIndex = 9;
             btnClose.Text = "O";
             btnClose.UseVisualStyleBackColor = true;
-            btnClose.Click += button1_Click_1;
+            btnClose.Click += btnClose_Click;
             // 
             // dangXuat_Btn
             // 
@@ -232,7 +232,7 @@
             infoRoom_Btn.TextAlign = ContentAlignment.MiddleLeft;
             infoRoom_Btn.TextImageRelation = TextImageRelation.ImageBeforeText;
             infoRoom_Btn.UseVisualStyleBackColor = true;
-            infoRoom_Btn.Click += button3_Click;
+            infoRoom_Btn.Click += infoRoom_Btn_Click;
             // 
             // bill_Btn
             // 
@@ -312,7 +312,7 @@
             hoSo_Btn.TextAlign = ContentAlignment.MiddleLeft;
             hoSo_Btn.TextImageRelation = TextImageRelation.ImageBeforeText;
             hoSo_Btn.UseVisualStyleBackColor = true;
-            hoSo_Btn.Click += button1_Click;
+            hoSo_Btn.Click += hoSo_Btn_Click;
             // 
             // panelLogo
             // 
