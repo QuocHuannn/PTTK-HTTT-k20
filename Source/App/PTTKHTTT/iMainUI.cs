@@ -19,18 +19,18 @@ namespace PTTKHTTT
         private int tempIndex;
         private Form activeForm;
 
-        //Constructor
-        public iMainUI()
+    //Constructor
+    public iMainUI()
         {
             InitializeComponent();
             random = new Random();
             btnCloseChildForm.Visible = false;
             this.Text = string.Empty;
             this.ControlBox = false;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-        }
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;          
+    }
 
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
@@ -99,8 +99,8 @@ namespace PTTKHTTT
             lblTitle.Text = childForm.Text;
         }
 
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+    
+            private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
@@ -115,29 +115,28 @@ namespace PTTKHTTT
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new iProfile(), sender);
-        }
-
         private void vScrollBar3_Scroll(object sender, ScrollEventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new iReserveInfo(), sender);
-        }
-
         private void datPhong_Btn_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new iBooking(), sender);
+            OpenChildForm(new iReserve(), sender);
         }
 
         private void dichVu_Btn_Click(object sender, EventArgs e)
         {
             OpenChildForm(new iService(), sender);
+        }
+        private void hoSo_Btn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new iProfile(), sender);
+        }
+
+        private void infoRoom_Btn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new iReserveInfo(), sender);
         }
 
         private void bill_Btn_Click(object sender, EventArgs e)
@@ -180,11 +179,6 @@ namespace PTTKHTTT
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void btnMaximize_Click(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Normal)
@@ -196,6 +190,11 @@ namespace PTTKHTTT
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
