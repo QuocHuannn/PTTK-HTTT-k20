@@ -35,13 +35,13 @@
             dataGridView1 = new DataGridView();
             label3 = new Label();
             label4 = new Label();
-            dataGridView3 = new DataGridView();
-            button4 = new Button();
+            infoService_dataGridView = new DataGridView();
+            confirm_Btn = new Button();
             button5 = new Button();
             button3 = new Button();
             dataGridView2 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)infoService_dataGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
@@ -123,29 +123,31 @@
             label4.TabIndex = 5;
             label4.Text = "THÔNG TIN CHI TIẾT";
             // 
-            // dataGridView3
+            // infoService_dataGridView
             // 
-            dataGridView3.Anchor = AnchorStyles.None;
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Location = new Point(634, 94);
-            dataGridView3.Margin = new Padding(3, 4, 3, 4);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.RowHeadersWidth = 51;
-            dataGridView3.RowTemplate.Height = 25;
-            dataGridView3.Size = new Size(414, 327);
-            dataGridView3.TabIndex = 6;
+            infoService_dataGridView.Anchor = AnchorStyles.None;
+            infoService_dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            infoService_dataGridView.Location = new Point(634, 94);
+            infoService_dataGridView.Margin = new Padding(3, 4, 3, 4);
+            infoService_dataGridView.Name = "infoService_dataGridView";
+            infoService_dataGridView.RowHeadersWidth = 51;
+            infoService_dataGridView.RowTemplate.Height = 25;
+            infoService_dataGridView.Size = new Size(414, 327);
+            infoService_dataGridView.TabIndex = 6;
+            infoService_dataGridView.CellContentClick += infoService_dataGridView_CellContentClick;
             // 
-            // button4
+            // confirm_Btn
             // 
-            button4.Anchor = AnchorStyles.None;
-            button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(784, 429);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(264, 31);
-            button4.TabIndex = 5;
-            button4.Text = "Xác nhận";
-            button4.UseVisualStyleBackColor = true;
+            confirm_Btn.Anchor = AnchorStyles.None;
+            confirm_Btn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            confirm_Btn.Location = new Point(784, 429);
+            confirm_Btn.Margin = new Padding(3, 4, 3, 4);
+            confirm_Btn.Name = "confirm_Btn";
+            confirm_Btn.Size = new Size(264, 31);
+            confirm_Btn.TabIndex = 5;
+            confirm_Btn.Text = "Xác nhận";
+            confirm_Btn.UseVisualStyleBackColor = true;
+            confirm_Btn.Click += confirm_Btn_Click;
             // 
             // button5
             // 
@@ -196,15 +198,15 @@
             Controls.Add(dataGridView1);
             Controls.Add(button5);
             Controls.Add(button3);
-            Controls.Add(button4);
-            Controls.Add(dataGridView3);
+            Controls.Add(confirm_Btn);
+            Controls.Add(infoService_dataGridView);
             Controls.Add(label4);
             Margin = new Padding(3, 4, 3, 4);
             Name = "iService";
             Text = "DỊCH VỤ";
             Load += iService_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)infoService_dataGridView).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -218,8 +220,8 @@
         private DataGridView dataGridView1;
         private Label label3;
         private Label label4;
-        private DataGridView dataGridView3;
-        private Button button4;
+        private DataGridView infoService_dataGridView;
+        private Button confirm_Btn;
         private Button button5;
         private Button button3;
         private DataGridView dataGridView2;
