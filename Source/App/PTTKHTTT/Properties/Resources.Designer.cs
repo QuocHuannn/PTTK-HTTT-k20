@@ -143,16 +143,6 @@ namespace PTTKHTTT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap key {
-            get {
-                object obj = ResourceManager.GetObject("key", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap kisspng_united_states_avatar_organization_information_user_avatar_5ac20804a62b58_8673620215226654766806 {
             get {
                 object obj = ResourceManager.GetObject("kisspng-united-states-avatar-organization-information-user-avatar-5ac20804a62b58." +
@@ -204,6 +194,16 @@ namespace PTTKHTTT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sleep {
+            get {
+                object obj = ResourceManager.GetObject("sleep", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sleeping {
             get {
                 object obj = ResourceManager.GetObject("sleeping", resourceCulture);
@@ -227,6 +227,16 @@ namespace PTTKHTTT.Properties {
         internal static System.Drawing.Bitmap sleeping2 {
             get {
                 object obj = ResourceManager.GetObject("sleeping2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sleeping3 {
+            get {
+                object obj = ResourceManager.GetObject("sleeping3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

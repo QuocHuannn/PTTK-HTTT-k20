@@ -8,6 +8,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace PTTKHTTT
 {
@@ -19,14 +22,31 @@ namespace PTTKHTTT
         private int tempIndex;
         private Form activeForm;
 
+
+        //Make connection into DB
+        SqlConnection _connection = null;
+        SqlCommand _command = null;
+        String _connectionString = "";
+
+
         //Constructor
-        public iMainUI()
+            public iMainUI()
         {
             InitializeComponent();
             random = new Random();
             btnCloseChildForm.Visible = false;
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
 
+            _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
         }
+
+[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
 
         //Methods
         private Color SelectThemeColor()
@@ -91,8 +111,8 @@ namespace PTTKHTTT
             lblTitle.Text = childForm.Text;
         }
 
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+    
+            private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
@@ -107,34 +127,46 @@ namespace PTTKHTTT
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new iProfile(), sender);
-        }
-
         private void vScrollBar3_Scroll(object sender, ScrollEventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new iReserveInfo(), sender);
-        }
-
         private void datPhong_Btn_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new iBooking(), sender);
+            OpenChildForm(new iReserve(), sender);
         }
 
         private void dichVu_Btn_Click(object sender, EventArgs e)
         {
             OpenChildForm(new iService(), sender);
         }
+        private void hoSo_Btn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new iProfile(), sender);
+        }
+
+        private void infoRoom_Btn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new iReserveInfo(), sender);
+        }
 
         private void bill_Btn_Click(object sender, EventArgs e)
         {
             //OpenChildForm(new iBill(), sender);
+            _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
+            _connection = new SqlConnection(_connectionString);
+            _connection.Open();
+
+            if (_connection.State == ConnectionState.Open)
+            {
+                Debug.WriteLine("Kết nối DB thành công");
+            }
+            else
+            {
+                Debug.WriteLine("Kết nối DB thất bại");
+            }
+            _connection.Close();
         }
 
         private void dangXuat_Btn_Click(object sender, EventArgs e)
@@ -166,9 +198,28 @@ namespace PTTKHTTT
             btnCloseChildForm.Visible = false;
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
 
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
