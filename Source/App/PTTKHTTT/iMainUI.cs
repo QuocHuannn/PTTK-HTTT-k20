@@ -19,18 +19,18 @@ namespace PTTKHTTT
         private int tempIndex;
         private Form activeForm;
 
-        //Constructor
-        public iMainUI()
+    //Constructor
+    public iMainUI()
         {
             InitializeComponent();
             random = new Random();
             btnCloseChildForm.Visible = false;
             this.Text = string.Empty;
             this.ControlBox = false;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-        }
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;          
+    }
 
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
@@ -99,8 +99,8 @@ namespace PTTKHTTT
             lblTitle.Text = childForm.Text;
         }
 
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+    
+            private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

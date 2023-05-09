@@ -103,9 +103,6 @@ namespace PTTKHTTT
             if (WindowState == FormWindowState.Normal)
                 this.WindowState = FormWindowState.Maximized;
             else
-                this.WindowState = FormWindowState.Normal; if (WindowState == FormWindowState.Normal)
-                this.WindowState = FormWindowState.Maximized;
-            else
                 this.WindowState = FormWindowState.Normal;
         }
 
