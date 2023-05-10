@@ -155,4 +155,7 @@ select * from Phong
 select * from Chitietdatphong
 SELECT * FROM DATPHONGDICHVU
 ----------------
-
+SELECT * FROM KHACHHANG;
+update KHACHHANG SET GIOITINH = 'NAM' WHERE ACCOUNTID = 1;
+SELECT * FROM KHACHHANG;
+----------------
