@@ -1,4 +1,4 @@
-﻿namespace PTTKHTTT
+namespace PTTKHTTT
 {
     partial class iSignIn
     {
@@ -204,6 +204,7 @@
             // 
             // passIcon
             // 
+            passIcon.Image = Properties.Resources.key1;
             passIcon.Location = new Point(17, 15);
             passIcon.Margin = new Padding(3, 4, 3, 4);
             passIcon.Name = "passIcon";
@@ -239,6 +240,7 @@
             // 
             // userNameIcon
             // 
+            userNameIcon.Image = Properties.Resources.user2;
             userNameIcon.InitialImage = null;
             userNameIcon.Location = new Point(17, 15);
             userNameIcon.Margin = new Padding(3, 4, 3, 4);
