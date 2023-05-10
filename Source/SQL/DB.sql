@@ -149,3 +149,10 @@ WHERE MaKH = 1
 select * from account 
 
 select * from khachhang
+----------------
+EXEC DatPhong @NgayThue = '2023-05-15', @NgayTra = '2023-05-20', @TenPhong = N'Phòng President', @TamGia = 2100000, @MaKH = 1;
+select * from Phong
+select * from Chitietdatphong
+SELECT * FROM DATPHONGDICHVU
+----------------
+

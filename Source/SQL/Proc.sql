@@ -238,3 +238,41 @@ END;
 EXEC DatPhong @NgayThue = '2023-05-15', @NgayTra = '2023-05-20', @TenPhong = N'Phòng President', @TamGia = 2100000, @MaKH = 1;
 select * from Phong
 select * from Chitietdatphong
+---
+
+--------- XÓA THÔNG TIN DỊCH VỤ CỦA ĐẶT PHÒNG
+CREATE PROCEDURE XoaThongTin
+    @MaDatPhong INT,
+    @MaDichVu INT
+AS
+BEGIN
+    BEGIN TRANSACTION;
+
+    -- Kiểm tra xem đặt phòng và dịch vụ tồn tại trong bảng tương ứng hay không
+    IF NOT EXISTS (SELECT 1 FROM ChiTietDatPhong WHERE MaDatPhong = @MaDatPhong)
+    BEGIN
+        RAISERROR(N'Không tìm thấy đặt phòng với mã đã cho.', 16, 1);
+        ROLLBACK;
+        RETURN;
+    END;
+
+    IF NOT EXISTS (SELECT 1 FROM DichVu WHERE MaDichVu = @MaDichVu)
+    BEGIN
+        RAISERROR(N'Không tìm thấy dịch vụ với mã đã cho.', 16, 1);
+        ROLLBACK;
+        RETURN;
+    END;
+
+    -- Xóa dữ liệu tương ứng trong bảng DatPhongDichVu
+    DELETE FROM DatPhongDichVu WHERE MaDatPhong = @MaDatPhong AND MaDichVu = @MaDichVu;
+
+    -- Cập nhật tổng tiền trong bảng HoaDon
+    UPDATE HoaDon SET TongTien = TongTien - (SELECT GiaDichVu FROM DichVu WHERE MaDichVu = @MaDichVu)
+    WHERE MaDatPhong = @MaDatPhong;
+
+    COMMIT;
+END;
+-----------------------------------------------
+select * from DATPHONGDICHVU;
+EXEC XoaThongTin @MaDatPhong = 1, @MaDichVu = 1;
+select * from DATPHONGDICHVU;
