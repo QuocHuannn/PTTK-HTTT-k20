@@ -117,3 +117,52 @@ END
 
 EXEC sp_CheckLogin @Username = 'DemoPro', @Pass = '123';
 EXEC sp_CheckLogin @Username = 'DemoPro', @Pass = '1123';
+
+-- tạo đăng ký --
+drop PROCEDURE RegisterAccount
+CREATE PROCEDURE RegisterAccount
+  @p_Username VARCHAR(255),
+  @p_Pass VARCHAR(255),
+  @p_ConfirmPass VARCHAR(255)
+AS
+BEGIN
+  DECLARE @v_Count INT;
+  DECLARE @v_MaxId INT;
+  
+  -- Kiểm tra xem Username đã tồn tại trong bảng Account hay chưa
+  SELECT @v_Count = COUNT(*) FROM Account WHERE Username = @p_Username;
+  
+  -- Nếu Username đã tồn tại, báo lỗi
+  IF @v_Count > 0
+  BEGIN
+    THROW 50001, N'Username đã tồn tại', 1;
+    RETURN;
+  END;
+  
+  -- Kiểm tra xem mật khẩu và mật khẩu xác nhận có trùng khớp hay không
+  IF @p_Pass <> @p_ConfirmPass
+  BEGIN
+    THROW 50002, N'Passwords không trùng khớp', 1;
+    RETURN;
+  END;
+  
+  -- Tìm giá trị ID lớn nhất trong bảng Account
+  SELECT @v_MaxId = MAX(ID) FROM Account;
+  
+ -- Thêm tài khoản mới vào bảng Account
+  INSERT INTO Account (Username, Pass) VALUES (@p_Username, @p_Pass);
+  
+  -- Cập nhật trường ID lên giá trị định danh tự động
+  UPDATE Account SET ID = SCOPE_IDENTITY() WHERE Username = @p_Username;
+END;
+
+-------------------------------------------
+DECLARE @Username VARCHAR(255);
+DECLARE @Pass VARCHAR(255);
+DECLARE @ConfirmPass VARCHAR(255);
+
+SET @Username = 'Nhan';
+SET @Pass = '1234';
+SET @ConfirmPass = '1234';
+
+EXEC RegisterAccount @Username, @Pass, @ConfirmPass;

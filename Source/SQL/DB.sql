@@ -143,7 +143,7 @@ VALUES
 (404, N'Phòng gia đình', N'Gần cửa hàng tiện lợi', N'Đang sử dụng', 130000),
 (405, N'Phòng President', N'Gần sân golf', N'Trống', 2100000);
 --------------
-Insert Into Account(Username, Pass) VALUES ('DemoPro','123' )
+Insert Into Account(Username,Pass) VALUES ('DemoPro' ,'123')
 UPDATE KhachHang
 SET AccountID = 1
 WHERE MaKH = 1
