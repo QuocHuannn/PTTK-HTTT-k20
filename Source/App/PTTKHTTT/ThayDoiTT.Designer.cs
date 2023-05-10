@@ -38,6 +38,10 @@
             txtSdt = new TextBox();
             Confirm = new Button();
             Huy = new Button();
+            Gender = new Label();
+            Address = new Label();
+            txtGender = new TextBox();
+            txtAddress = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -64,7 +68,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(41, 176);
+            label2.Location = new Point(41, 153);
             label2.Name = "label2";
             label2.Size = new Size(161, 28);
             label2.TabIndex = 2;
@@ -72,7 +76,7 @@
             // 
             // txtName
             // 
-            txtName.Location = new Point(251, 173);
+            txtName.Location = new Point(251, 151);
             txtName.Margin = new Padding(3, 4, 3, 4);
             txtName.Name = "txtName";
             txtName.Size = new Size(407, 27);
@@ -82,7 +86,7 @@
             // 
             CMND.AutoSize = true;
             CMND.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            CMND.Location = new Point(41, 256);
+            CMND.Location = new Point(41, 211);
             CMND.Name = "CMND";
             CMND.Size = new Size(74, 28);
             CMND.TabIndex = 19;
@@ -90,7 +94,7 @@
             // 
             // txtCMND
             // 
-            txtCMND.Location = new Point(251, 253);
+            txtCMND.Location = new Point(251, 213);
             txtCMND.Margin = new Padding(3, 4, 3, 4);
             txtCMND.Name = "txtCMND";
             txtCMND.Size = new Size(407, 27);
@@ -100,7 +104,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(41, 324);
+            label4.Location = new Point(41, 287);
             label4.Name = "label4";
             label4.Size = new Size(138, 28);
             label4.TabIndex = 21;
@@ -108,15 +112,16 @@
             // 
             // txtSdt
             // 
-            txtSdt.Location = new Point(251, 321);
+            txtSdt.Location = new Point(251, 284);
             txtSdt.Margin = new Padding(3, 4, 3, 4);
             txtSdt.Name = "txtSdt";
             txtSdt.Size = new Size(407, 27);
             txtSdt.TabIndex = 22;
+            txtSdt.TextChanged += txtSdt_TextChanged;
             // 
             // Confirm
             // 
-            Confirm.Location = new Point(721, 476);
+            Confirm.Location = new Point(725, 493);
             Confirm.Margin = new Padding(3, 4, 3, 4);
             Confirm.Name = "Confirm";
             Confirm.Size = new Size(95, 55);
@@ -127,7 +132,7 @@
             // 
             // Huy
             // 
-            Huy.Location = new Point(41, 476);
+            Huy.Location = new Point(41, 493);
             Huy.Margin = new Padding(3, 4, 3, 4);
             Huy.Name = "Huy";
             Huy.Size = new Size(95, 55);
@@ -136,11 +141,51 @@
             Huy.UseVisualStyleBackColor = true;
             Huy.Click += Huy_Click;
             // 
+            // Gender
+            // 
+            Gender.AutoSize = true;
+            Gender.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Gender.Location = new Point(41, 353);
+            Gender.Name = "Gender";
+            Gender.Size = new Size(95, 28);
+            Gender.TabIndex = 25;
+            Gender.Text = "Giới tính";
+            // 
+            // Address
+            // 
+            Address.AutoSize = true;
+            Address.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Address.Location = new Point(41, 413);
+            Address.Name = "Address";
+            Address.Size = new Size(78, 28);
+            Address.TabIndex = 26;
+            Address.Text = "Địa chỉ";
+            // 
+            // txtGender
+            // 
+            txtGender.Location = new Point(251, 351);
+            txtGender.Margin = new Padding(3, 4, 3, 4);
+            txtGender.Name = "txtGender";
+            txtGender.Size = new Size(407, 27);
+            txtGender.TabIndex = 27;
+            // 
+            // txtAddress
+            // 
+            txtAddress.Location = new Point(251, 411);
+            txtAddress.Margin = new Padding(3, 4, 3, 4);
+            txtAddress.Name = "txtAddress";
+            txtAddress.Size = new Size(407, 27);
+            txtAddress.TabIndex = 28;
+            // 
             // ThayDoiTT
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(914, 600);
+            Controls.Add(txtAddress);
+            Controls.Add(txtGender);
+            Controls.Add(Address);
+            Controls.Add(Gender);
             Controls.Add(Huy);
             Controls.Add(Confirm);
             Controls.Add(txtSdt);
@@ -171,5 +216,9 @@
         private TextBox txtSdt;
         private Button Confirm;
         private Button Huy;
+        private Label Gender;
+        private Label Address;
+        private TextBox txtGender;
+        private TextBox txtAddress;
     }
 }

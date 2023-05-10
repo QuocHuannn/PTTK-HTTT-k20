@@ -18,8 +18,6 @@ namespace PTTKHTTT
         SqlConnection _connection = null;
         SqlCommand _command = null;
         String _connectionString = "";
-
-
         public iProfile()
         {
             InitializeComponent();
@@ -71,12 +69,11 @@ namespace PTTKHTTT
                 txtSdt.Text = sdt;
             }
         }
- 
-        private void changeInfo_Btn_Click(object sender, EventArgs e)
+
+        private void change_Btn_Click(object sender, EventArgs e)
         {
-            this.Close();
-            ThayDoiTT thayDoiTT = new ThayDoiTT();
-            thayDoiTT.Show();
+            ThayDoiTT thayDoi = new ThayDoiTT();
+            thayDoi.Show();
         }
     }
 }

@@ -33,7 +33,7 @@
             label2 = new Label();
             CMND = new Label();
             label4 = new Label();
-            changeInfo_Btn = new Button();
+            change_Btn = new Button();
             txtName = new TextBox();
             txtCMND = new TextBox();
             txtSdt = new TextBox();
@@ -90,17 +90,16 @@
             label4.TabIndex = 3;
             label4.Text = "Số điện thoại";
             // 
-            // changeInfo_Btn
+            // change_Btn
             // 
-            changeInfo_Btn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            changeInfo_Btn.Location = new Point(375, 404);
-            changeInfo_Btn.Margin = new Padding(3, 4, 3, 4);
-            changeInfo_Btn.Name = "changeInfo_Btn";
-            changeInfo_Btn.Size = new Size(95, 55);
-            changeInfo_Btn.TabIndex = 13;
-            changeInfo_Btn.Text = "Thay đổi";
-            changeInfo_Btn.UseVisualStyleBackColor = true;
-            changeInfo_Btn.Click += changeInfo_Btn_Click;
+            change_Btn.Location = new Point(375, 404);
+            change_Btn.Margin = new Padding(3, 4, 3, 4);
+            change_Btn.Name = "change_Btn";
+            change_Btn.Size = new Size(95, 55);
+            change_Btn.TabIndex = 13;
+            change_Btn.Text = "Thay đổi";
+            change_Btn.UseVisualStyleBackColor = true;
+            change_Btn.Click += change_Btn_Click;
             // 
             // txtName
             // 
@@ -134,7 +133,7 @@
             Controls.Add(txtSdt);
             Controls.Add(txtCMND);
             Controls.Add(txtName);
-            Controls.Add(changeInfo_Btn);
+            Controls.Add(change_Btn);
             Controls.Add(label4);
             Controls.Add(CMND);
             Controls.Add(label2);
@@ -156,7 +155,7 @@
         private Label label2;
         private Label CMND;
         private Label label4;
-        private Button changeInfo_Btn;
+        private Button change_Btn;
         private TextBox txtName;
         private TextBox txtCMND;
         private TextBox txtSdt;
