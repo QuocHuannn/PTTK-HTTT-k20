@@ -193,6 +193,8 @@ namespace PTTKHTTT
 
             // Tạo đối tượng SqlConnection để kết nối đến cơ sở dữ liệu
             using (SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True"))
+            //using (SqlConnection connection = new SqlConnection(@"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True"))
+
             {
                 // Mở kết nối đến cơ sở dữ liệu
                 connection.Open();
@@ -236,6 +238,7 @@ namespace PTTKHTTT
 
             // Tạo đối tượng SqlConnection để kết nối đến cơ sở dữ liệu
             using (SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True"))
+            //using (SqlConnection connection = new SqlConnection(@"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True"))
             {
                 // Mở kết nối đến cơ sở dữ liệu
                 connection.Open();
