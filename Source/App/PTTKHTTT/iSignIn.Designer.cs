@@ -1,4 +1,4 @@
-﻿namespace PTTKHTTT
+namespace PTTKHTTT
 {
     partial class iSignIn
     {
