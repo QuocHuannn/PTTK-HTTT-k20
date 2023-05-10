@@ -38,16 +38,16 @@
             this.backSignIn_Btn = new System.Windows.Forms.Button();
             this.valiSignUp_Btn = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.rePassWord = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.PassWord = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.UserName = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -191,7 +191,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.Control;
-            this.panel5.Controls.Add(this.textBox3);
+            this.panel5.Controls.Add(this.rePassWord);
             this.panel5.Controls.Add(this.pictureBox4);
             this.panel5.Location = new System.Drawing.Point(0, 300);
             this.panel5.Name = "panel5";
@@ -199,14 +199,15 @@
             this.panel5.TabIndex = 9;
             this.panel5.Click += new System.EventHandler(this.name_Click);
             // 
-            // textBox3
+            // rePassWord
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(59, 11);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(370, 16);
-            this.textBox3.TabIndex = 8;
+            this.rePassWord.BackColor = System.Drawing.SystemColors.Control;
+            this.rePassWord.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rePassWord.Location = new System.Drawing.Point(59, 11);
+            this.rePassWord.Name = "rePassWord";
+            this.rePassWord.PasswordChar = '*';
+            this.rePassWord.Size = new System.Drawing.Size(370, 16);
+            this.rePassWord.TabIndex = 8;
             // 
             // pictureBox4
             // 
@@ -251,7 +252,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.Controls.Add(this.textBox2);
+            this.panel4.Controls.Add(this.PassWord);
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Location = new System.Drawing.Point(0, 234);
             this.panel4.Name = "panel4";
@@ -259,15 +260,16 @@
             this.panel4.TabIndex = 7;
             this.panel4.Click += new System.EventHandler(this.password_Click);
             // 
-            // textBox2
+            // PassWord
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(59, 11);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(370, 16);
-            this.textBox2.TabIndex = 8;
+            this.PassWord.BackColor = System.Drawing.SystemColors.Control;
+            this.PassWord.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PassWord.Location = new System.Drawing.Point(59, 11);
+            this.PassWord.Name = "PassWord";
+            this.PassWord.PasswordChar = '*';
+            this.PassWord.Size = new System.Drawing.Size(370, 16);
+            this.PassWord.TabIndex = 8;
+            this.PassWord.Click += new System.EventHandler(this.password_Click);
             // 
             // pictureBox3
             // 
@@ -282,7 +284,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.UserName);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Location = new System.Drawing.Point(0, 161);
             this.panel3.Name = "panel3";
@@ -290,14 +292,14 @@
             this.panel3.TabIndex = 6;
             this.panel3.Click += new System.EventHandler(this.username_Click);
             // 
-            // textBox1
+            // UserName
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(59, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(370, 16);
-            this.textBox1.TabIndex = 7;
+            this.UserName.BackColor = System.Drawing.Color.White;
+            this.UserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UserName.Location = new System.Drawing.Point(59, 12);
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(370, 16);
+            this.UserName.TabIndex = 7;
             // 
             // pictureBox2
             // 
@@ -357,16 +359,16 @@
         private Label label1;
         private Label label2;
         private Panel panel3;
-        private TextBox textBox1;
+        private TextBox UserName;
         private PictureBox pictureBox2;
         private Panel panel5;
-        private TextBox textBox3;
+        private TextBox rePassWord;
         private PictureBox pictureBox4;
         private Label label5;
         private Label label4;
         private Label label3;
         private Panel panel4;
-        private TextBox textBox2;
+        private TextBox PassWord;
         private PictureBox pictureBox3;
         private Button valiSignUp_Btn;
         private Button backSignIn_Btn;

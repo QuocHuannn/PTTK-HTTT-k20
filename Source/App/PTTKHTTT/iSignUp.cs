@@ -7,14 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.Data.SqlClient;
+using System.Xml.Linq;
 
 namespace PTTKHTTT
 {
     public partial class iSignUp : Form
     {
+        SqlConnection _connection = null;
+        SqlCommand _command = null;
+        String _connectionString = "";
         public iSignUp()
         {
+            
             InitializeComponent();
+            //_connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
+            _connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -33,41 +42,41 @@ namespace PTTKHTTT
         */
         private void username_Click(object sender, EventArgs e)
         {
-            textBox1.BackColor = Color.White;
+            UserName.BackColor = Color.White;
             panel3.BackColor = Color.White;
-            textBox2.BackColor = SystemColors.Control;
+            PassWord.BackColor = SystemColors.Control;
             panel4.BackColor = SystemColors.Control;
-            textBox3.BackColor = SystemColors.Control;
+            rePassWord.BackColor = SystemColors.Control;
             panel5.BackColor = SystemColors.Control;
             
         }
         private void password_Click(object sender, EventArgs e)
         {
-            textBox1.BackColor = SystemColors.Control;
+            UserName.BackColor = SystemColors.Control;
             panel3.BackColor = SystemColors.Control;
-            textBox2.BackColor = Color.White;
+            PassWord.BackColor = Color.White;
             panel4.BackColor = Color.White;
-            textBox3.BackColor = SystemColors.Control;
+            rePassWord.BackColor = SystemColors.Control;
             panel5.BackColor = SystemColors.Control;
            
         }
         private void name_Click(object sender, EventArgs e)
         {
-            textBox1.BackColor = SystemColors.Control;
+            UserName.BackColor = SystemColors.Control;
             panel3.BackColor = SystemColors.Control;
-            textBox2.BackColor = SystemColors.Control;
+            PassWord.BackColor = SystemColors.Control;
             panel4.BackColor = SystemColors.Control;
-            textBox3.BackColor = Color.White;
+            rePassWord.BackColor = Color.White;
             panel5.BackColor = Color.White;
             
         }
         private void phone_Click(object sender, EventArgs e)
         {
-            textBox1.BackColor = SystemColors.Control;
+            UserName.BackColor = SystemColors.Control;
             panel3.BackColor = SystemColors.Control;
-            textBox2.BackColor = SystemColors.Control;
+            PassWord.BackColor = SystemColors.Control;
             panel4.BackColor = SystemColors.Control;
-            textBox3.BackColor = SystemColors.Control;
+            rePassWord.BackColor = SystemColors.Control;
             panel5.BackColor = SystemColors.Control;
            
         }
@@ -86,7 +95,28 @@ namespace PTTKHTTT
 
         private void valiSignUp_Btn_Click(object sender, EventArgs e)
         {
+            //SqlConnection connection = new SqlConnection("Data Source=LAPTOP-V9EI97MS\\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True;");
+            SqlConnection connection = new SqlConnection("Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True;");
+            connection.Open();
+            string uName=UserName.Text;
+            string uPass=PassWord.Text;
+            string rePass=rePassWord.Text;
+            SqlCommand sql = new SqlCommand("RegisterAccount", connection);
+            sql.CommandType = CommandType.StoredProcedure;
+            sql.Parameters.AddWithValue("@p_Username", SqlDbType.VarChar).Value = uName;
+            sql.Parameters.AddWithValue("@p_Pass", SqlDbType.VarChar).Value = uPass;
+            sql.Parameters.AddWithValue("@p_ConfirmPass", SqlDbType.VarChar).Value = rePass;
+            try
+            {
+                SqlDataReader reader = sql.ExecuteReader();
+                MessageBox.Show("Dang Ky Thanh Cong");
 
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Loi");
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
