@@ -27,7 +27,8 @@ namespace PTTKHTTT
         {
             InitializeComponent();
 
-            _connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
+            //_connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
+            _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
         }
         private void iService_Load(object sender, EventArgs e)
         {
@@ -62,7 +63,8 @@ namespace PTTKHTTT
 
         private void findService_Btn_Click(object sender, EventArgs e)
         {
-            _connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
+            //_connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
+            _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
             _connection = new SqlConnection(_connectionString);
             _connection.Open();
 
