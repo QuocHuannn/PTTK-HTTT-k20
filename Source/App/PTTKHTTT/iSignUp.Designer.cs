@@ -222,6 +222,7 @@
             // 
             // pictureBox5
             // 
+            pictureBox5.Image = Properties.Resources.telephone;
             pictureBox5.Location = new Point(17, 15);
             pictureBox5.Margin = new Padding(3, 4, 3, 4);
             pictureBox5.Name = "pictureBox5";
@@ -264,6 +265,7 @@
             // 
             // pictureBox4
             // 
+            pictureBox4.Image = Properties.Resources.id_card;
             pictureBox4.Location = new Point(17, 15);
             pictureBox4.Margin = new Padding(3, 4, 3, 4);
             pictureBox4.Name = "pictureBox4";
@@ -327,6 +329,7 @@
             // 
             // pictureBox3
             // 
+            pictureBox3.Image = Properties.Resources.key;
             pictureBox3.Location = new Point(17, 15);
             pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
@@ -362,6 +365,7 @@
             // 
             // pictureBox2
             // 
+            pictureBox2.Image = Properties.Resources.user1;
             pictureBox2.Location = new Point(17, 15);
             pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
