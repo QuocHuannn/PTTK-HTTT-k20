@@ -92,7 +92,7 @@ BEGIN
 
     SELECT @MaHoaDon AS 'MaHoaDon', @TongTien AS 'TongTien', @NgayIn AS 'NgayIn', @MaNV AS 'MaNV', @MaDatPhong AS 'MaDatPhong'
 END
-
+	
 ---- check đăng nhập
 CREATE PROCEDURE sp_CheckLogin
    @Username VARCHAR(50),
@@ -127,7 +127,6 @@ CREATE PROCEDURE RegisterAccount
 AS
 BEGIN
   DECLARE @v_Count INT;
-  DECLARE @v_MaxId INT;
   
   -- Kiểm tra xem Username đã tồn tại trong bảng Account hay chưa
   SELECT @v_Count = COUNT(*) FROM Account WHERE Username = @p_Username;
@@ -146,23 +145,134 @@ BEGIN
     RETURN;
   END;
   
-  -- Tìm giá trị ID lớn nhất trong bảng Account
-  SELECT @v_MaxId = MAX(ID) FROM Account;
-  
- -- Thêm tài khoản mới vào bảng Account
+  -- Thêm tài khoản mới vào bảng Account
   INSERT INTO Account (Username, Pass) VALUES (@p_Username, @p_Pass);
-  
-  -- Cập nhật trường ID lên giá trị định danh tự động
-  UPDATE Account SET ID = SCOPE_IDENTITY() WHERE Username = @p_Username;
 END;
-
 -------------------------------------------
 DECLARE @Username VARCHAR(255);
 DECLARE @Pass VARCHAR(255);
 DECLARE @ConfirmPass VARCHAR(255);
 
-SET @Username = 'Nhan';
-SET @Pass = '1234';
-SET @ConfirmPass = '1234';
+SET @Username = 'NhanDeptrai';
+SET @Pass = '1234512';
+SET @ConfirmPass = '1234512';
 
 EXEC RegisterAccount @Username, @Pass, @ConfirmPass;
+
+select * from account
+----update ID--
+drop PROCEDURE UpdateAccountID
+CREATE PROCEDURE UpdateAccountID
+  @p_Username VARCHAR(50)
+AS
+BEGIN
+  BEGIN TRY
+    BEGIN TRANSACTION;
+
+    -- Lấy giá trị ID từ bảng Account dựa trên tên người dùng
+    DECLARE @v_AccountID INT;
+    SELECT @v_AccountID = ID FROM Account WHERE Username = @p_Username;
+
+    -- Cập nhật trường AccountID trong bảng KhachHang
+    UPDATE KhachHang
+    SET AccountID = @v_AccountID
+    WHERE MaKH = (SELECT TOP 1 MaKH FROM KhachHang WHERE AccountID IS NULL);
+
+    COMMIT;
+  END TRY
+  BEGIN CATCH
+    IF @@TRANCOUNT > 0
+      ROLLBACK;
+
+    THROW;
+  END CATCH;
+END;
+EXEC UpdateAccountID @p_Username = 'Nhan1';
+
+---proc đặt phòng ---
+drop PROCEDURE DatPhong
+CREATE PROCEDURE DatPhong
+  @NgayThue DATE,
+  @NgayTra DATE,
+  @TenPhong NVARCHAR(50),
+  @TamGia FLOAT,
+  @MaKH INT
+AS
+BEGIN
+  -- Tìm phòng phù hợp với loại phòng và tầm giá tiền thuê
+  DECLARE @MaPhong INT;
+  SELECT TOP 1 @MaPhong = MaPhong
+  FROM Phong
+  WHERE TenPhong = @TenPhong AND GiaPhong <= @TamGia AND TrangThai = N'Trống'
+  ORDER BY GiaPhong ASC;
+
+  -- Nếu không tìm thấy phòng phù hợp, thông báo không có phòng khả dụng
+  IF @MaPhong IS NULL
+  BEGIN
+    RAISERROR(N'Không có phòng khả dụng cho loại phòng và tầm giá tiền thuê đã chọn.', 16, 1);
+    RETURN;
+  END;
+
+  -- Thực hiện việc đặt phòng
+  BEGIN TRY
+    BEGIN TRANSACTION;
+
+    -- Cập nhật trạng thái phòng thành "Đã đặt"
+    UPDATE Phong
+    SET TrangThai = N'Đã đặt'
+    WHERE MaPhong = @MaPhong;
+
+    -- Thêm thông tin đặt phòng vào bảng ChiTietDatPhong
+    INSERT INTO ChiTietDatPhong (MaPhong, MaKH, NgayThue, NgayTra, SoNguoi, DaThanhToan)
+    VALUES (@MaPhong, @MaKH, @NgayThue, @NgayTra, 1, 0);
+
+    COMMIT;
+  END TRY
+  BEGIN CATCH
+    ROLLBACK;
+    THROW;
+  END CATCH;
+END;
+
+---
+EXEC DatPhong @NgayThue = '2023-05-15', @NgayTra = '2023-05-20', @TenPhong = N'Phòng President', @TamGia = 2100000, @MaKH = 1;
+select * from Phong
+select * from Chitietdatphong
+---
+
+--------- XÓA THÔNG TIN DỊCH VỤ CỦA ĐẶT PHÒNG
+CREATE PROCEDURE XoaThongTin
+    @MaDatPhong INT,
+    @MaDichVu INT
+AS
+BEGIN
+    BEGIN TRANSACTION;
+
+    -- Kiểm tra xem đặt phòng và dịch vụ tồn tại trong bảng tương ứng hay không
+    IF NOT EXISTS (SELECT 1 FROM ChiTietDatPhong WHERE MaDatPhong = @MaDatPhong)
+    BEGIN
+        RAISERROR(N'Không tìm thấy đặt phòng với mã đã cho.', 16, 1);
+        ROLLBACK;
+        RETURN;
+    END;
+
+    IF NOT EXISTS (SELECT 1 FROM DichVu WHERE MaDichVu = @MaDichVu)
+    BEGIN
+        RAISERROR(N'Không tìm thấy dịch vụ với mã đã cho.', 16, 1);
+        ROLLBACK;
+        RETURN;
+    END;
+
+    -- Xóa dữ liệu tương ứng trong bảng DatPhongDichVu
+    DELETE FROM DatPhongDichVu WHERE MaDatPhong = @MaDatPhong AND MaDichVu = @MaDichVu;
+
+    -- Cập nhật tổng tiền trong bảng HoaDon
+    UPDATE HoaDon SET TongTien = TongTien - (SELECT GiaDichVu FROM DichVu WHERE MaDichVu = @MaDichVu)
+    WHERE MaDatPhong = @MaDatPhong;
+
+    COMMIT;
+END;
+-----------------------------------------------
+select * from DATPHONGDICHVU;
+EXEC XoaThongTin @MaDatPhong = 1, @MaDichVu = 1;
+select * from DATPHONGDICHVU;
