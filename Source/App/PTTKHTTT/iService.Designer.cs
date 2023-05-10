@@ -102,6 +102,7 @@
             infoByName_dataGridView.RowHeadersWidth = 51;
             infoByName_dataGridView.Size = new Size(521, 114);
             infoByName_dataGridView.TabIndex = 0;
+            infoByName_dataGridView.CellClick += infoByName_dataGridView_CellClick;
             // 
             // label3
             // 
@@ -128,6 +129,7 @@
             // infoService_dataGridView
             // 
             infoService_dataGridView.Anchor = AnchorStyles.None;
+            infoService_dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
             infoService_dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             infoService_dataGridView.Location = new Point(634, 94);
             infoService_dataGridView.Margin = new Padding(3, 4, 3, 4);
@@ -185,6 +187,7 @@
             addedService_dataGridView.RowHeadersWidth = 51;
             addedService_dataGridView.Size = new Size(521, 114);
             addedService_dataGridView.TabIndex = 5;
+            addedService_dataGridView.CellClick += addedService_dataGridView_CellClick;
             // 
             // iService
             // 

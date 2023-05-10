@@ -39,8 +39,7 @@ namespace PTTKHTTT
             panel4.BackColor = SystemColors.Control;
             textBox3.BackColor = SystemColors.Control;
             panel5.BackColor = SystemColors.Control;
-            textBox4.BackColor = SystemColors.Control;
-            panel6.BackColor = SystemColors.Control;
+            
         }
         private void password_Click(object sender, EventArgs e)
         {
@@ -50,8 +49,7 @@ namespace PTTKHTTT
             panel4.BackColor = Color.White;
             textBox3.BackColor = SystemColors.Control;
             panel5.BackColor = SystemColors.Control;
-            textBox4.BackColor = SystemColors.Control;
-            panel6.BackColor = SystemColors.Control;
+           
         }
         private void name_Click(object sender, EventArgs e)
         {
@@ -61,8 +59,7 @@ namespace PTTKHTTT
             panel4.BackColor = SystemColors.Control;
             textBox3.BackColor = Color.White;
             panel5.BackColor = Color.White;
-            textBox4.BackColor = SystemColors.Control;
-            panel6.BackColor = SystemColors.Control;
+            
         }
         private void phone_Click(object sender, EventArgs e)
         {
@@ -72,8 +69,7 @@ namespace PTTKHTTT
             panel4.BackColor = SystemColors.Control;
             textBox3.BackColor = SystemColors.Control;
             panel5.BackColor = SystemColors.Control;
-            textBox4.BackColor = Color.White;
-            panel6.BackColor = Color.White;
+           
         }
 
         private void X_Click(object sender, EventArgs e)
