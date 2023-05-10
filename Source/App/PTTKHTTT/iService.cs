@@ -58,7 +58,19 @@ namespace PTTKHTTT
 
         private void confirm_Btn_Click(object sender, EventArgs e)
         {
+            decimal totalPrice = 0;
 
+            foreach (DataGridViewRow row in addedService_dataGridView.Rows)
+            {
+                // Lấy giá trị trong cột "GiaDichVu"
+                decimal giaDichVu = Convert.ToDecimal(row.Cells["GiaDichVu"].Value);
+
+                // Tính toán giá tiền tương ứng và cộng vào tổng giá tiền
+                totalPrice += giaDichVu;
+            }
+
+            // Hiển thị tổng giá tiền cho tất cả các dịch vụ đã chọn
+            MessageBox.Show("Tổng giá tiền: " + totalPrice.ToString() + ". Cảm ơn bạn đã chọn dịch vụ của SLEEPING !");
         }
 
         private void findService_Btn_Click(object sender, EventArgs e)
@@ -106,7 +118,8 @@ namespace PTTKHTTT
 
         private void addService_Btn_Click(object sender, EventArgs e)
         {
-            _connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
+            //_connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
+            _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
             _connection = new SqlConnection(_connectionString);
             _connection.Open();
 
@@ -119,33 +132,6 @@ namespace PTTKHTTT
                 Debug.WriteLine("Kết nối DB thất bại");
             }
 
-            //Bước 2: Xây dựng câu lệnh SQL để thực hiện chức năng mong muốn
-            //string keyword = find_txt.Text;
-            //string keyword2 = find_txt.Text;
-            //string keyword3 = find_txt.Text;
-
-            //String sql = "exec ThemDichVuVaoDatPhong " + " @MaDatPhong = " + keyword + ", @MaDichVu = " + keyword2 + ", @SoLuong = " + keyword3;
-            ////String sql2 = "select * from dbo.ChiTietTHucDon where MaDoiTac = '" + keyword + "'";
-            ////String sql = "update Phong set TenPhong = 'Phòng đơn' where MaPhong = 101;";
-
-            ////String sql = "exec ShowDichVuByTen N'giặt là'";
-
-
-            ////Bước 3: Tạo đối tượng thực thi câu lệnh SQL
-            //SqlDataAdapter adapt = new SqlDataAdapter(sql, _connection);
-            ////SqlDataAdapter adapt2 = new SqlDataAdapter(sql2, _connection);
-            //DataSet dts = new DataSet();
-            ////DataSet dts2 = new DataSet();
-
-            //adapt.Fill(dts);
-            ////adapt2.Fill(dts2);
-
-            //if (dts.Tables.Count > 0)
-            //{
-            //    //Dua du lieu vao combo_box
-            //    infoByName_dataGridView.DataSource = dts.Tables[0];
-            //}
-            //addedService_dataGridView.Columns.Add("MaDichVu", "Mã Dịch Vụ");
             if (!isColAdded)
             {
                 addedService_dataGridView.Columns.Add("TenDichVu", "Tên Dịch Vụ");
@@ -170,7 +156,25 @@ namespace PTTKHTTT
 
                 // Thêm dòng mới vào addedService_dataGridView bằng cách sử dụng mảng rowData
                 addedService_dataGridView.Rows.Add(rowData);
+
+                //Bước 2: Xây dựng câu lệnh SQL để thực hiện chức năng mong muốn
+                string sql = "select MaDichVu from DichVu where TenDichVu = N'" + rowData[0] + "'";
+                //Bước 3: Tạo đối tượng thực thi câu lệnh SQL
+                SqlCommand command = new SqlCommand(sql, _connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+
+                string keyword = dataTable.Rows[0]["MaDichVu"].ToString();
+                Debug.WriteLine(keyword);
+
+                String sql2 = "exec ThemDichVuVaoDatPhong " + " @MaDatPhong = 1, @MaDichVu = " + keyword + ", @SoLuong = 10";
+                SqlCommand command2 = new SqlCommand(sql2, _connection);
+                SqlDataAdapter adapter2 = new SqlDataAdapter(command2);
+                DataTable dataTable2 = new DataTable();
+                adapter2.Fill(dataTable2);
             }
+
             _connection.Close();
         }
 
@@ -189,6 +193,8 @@ namespace PTTKHTTT
 
             // Tạo đối tượng SqlConnection để kết nối đến cơ sở dữ liệu
             using (SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True"))
+            //using (SqlConnection connection = new SqlConnection(@"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True"))
+
             {
                 // Mở kết nối đến cơ sở dữ liệu
                 connection.Open();
@@ -232,6 +238,7 @@ namespace PTTKHTTT
 
             // Tạo đối tượng SqlConnection để kết nối đến cơ sở dữ liệu
             using (SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True"))
+            //using (SqlConnection connection = new SqlConnection(@"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True"))
             {
                 // Mở kết nối đến cơ sở dữ liệu
                 connection.Open();
@@ -258,6 +265,70 @@ namespace PTTKHTTT
                 // Đóng kết nối đến cơ sở dữ liệu
                 connection.Close();
             }
+        }
+
+        private void xoaTT_Btn_Click(object sender, EventArgs e)
+        {
+            //_connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
+            _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
+            _connection = new SqlConnection(_connectionString);
+            _connection.Open();
+
+            if (_connection.State == ConnectionState.Open)
+            {
+                Debug.WriteLine("Kết nối DB thành công");
+            }
+            else
+            {
+                Debug.WriteLine("Kết nối DB thất bại");
+            }
+
+            if (!isColAdded)
+            {
+                addedService_dataGridView.Columns.Add("TenDichVu", "Tên Dịch Vụ");
+                addedService_dataGridView.Columns.Add("GiaDichVu", "Giá Dịch Vụ");
+                isColAdded = true;
+            }
+
+
+            if (addedService_dataGridView.SelectedRows.Count > 0)
+            {
+                // Lấy dòng được chọn từ infoByName_dataGridView
+                DataGridViewRow selectedRow = addedService_dataGridView.SelectedRows[0];
+
+                // Tạo một mảng để chứa giá trị từ các ô của dòng được chọn
+                object[] rowData = new object[selectedRow.Cells.Count];
+
+                // Duyệt qua các ô của dòng được chọn và thêm giá trị vào mảng rowData
+                for (int i = 0; i < selectedRow.Cells.Count; i++)
+                {
+                    rowData[i] = selectedRow.Cells[i].Value;
+                }
+
+                // Gọi hàm xóa dòng trong thread giao diện chính của ứng dụng
+                addedService_dataGridView.BeginInvoke(new Action(() => addedService_dataGridView.Rows.Remove(selectedRow)));
+
+
+                //Bước 2: Xây dựng câu lệnh SQL để thực hiện chức năng mong muốn
+                string sql = "select MaDichVu from DichVu where TenDichVu = N'" + rowData[0] + "'";
+                //Bước 3: Tạo đối tượng thực thi câu lệnh SQL
+                SqlCommand command = new SqlCommand(sql, _connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+
+                string keyword = dataTable.Rows[0]["MaDichVu"].ToString();
+                Debug.WriteLine(keyword);
+
+                String sql2 = "EXEC XoaThongTin @MaDatPhong = 1, @MaDichVu = " + keyword;
+                SqlCommand command2 = new SqlCommand(sql2, _connection);
+                SqlDataAdapter adapter2 = new SqlDataAdapter(command2);
+                DataTable dataTable2 = new DataTable();
+                adapter2.Fill(dataTable2);
+            }
+
+            _connection.Close();
+
         }
     }
 }

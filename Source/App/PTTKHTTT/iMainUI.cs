@@ -30,7 +30,7 @@ namespace PTTKHTTT
 
 
         //Constructor
-            public iMainUI()
+        public iMainUI()
         {
             InitializeComponent();
             random = new Random();
@@ -39,8 +39,8 @@ namespace PTTKHTTT
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
 
-            //_connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
-            _connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
+            _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
+            //_connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
 
         }
 
@@ -113,8 +113,8 @@ namespace PTTKHTTT
             lblTitle.Text = childForm.Text;
         }
 
-    
-            private void pictureBox1_Click(object sender, EventArgs e)
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
@@ -155,21 +155,7 @@ namespace PTTKHTTT
 
         private void bill_Btn_Click(object sender, EventArgs e)
         {
-            //OpenChildForm(new iBill(), sender);
-            //_connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
-            _connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
-            _connection = new SqlConnection(_connectionString);
-            _connection.Open();
-
-            if (_connection.State == ConnectionState.Open)
-            {
-                Debug.WriteLine("Kết nối DB thành công");
-            }
-            else
-            {
-                Debug.WriteLine("Kết nối DB thất bại");
-            }
-            _connection.Close();
+            OpenChildForm(new iPayment(), sender);
         }
 
         private void dangXuat_Btn_Click(object sender, EventArgs e)

@@ -41,10 +41,8 @@ CREATE TABLE ChiTietDatPhong (
    NgayTra DATE NOT NULL,
    SoNguoi INT NOT NULL,
    DaThanhToan BIT NOT NULL DEFAULT 0,
-   MaNV INT NOT NULL,
    CONSTRAINT FK_ChiTietDatPhong_MaPhong FOREIGN KEY (MaPhong) REFERENCES Phong(MaPhong),
    CONSTRAINT FK_ChiTietDatPhong_MaKH FOREIGN KEY (MaKH) REFERENCES KhachHang(MaKH),
-   CONSTRAINT FK_ChiTietDatPhong_MaNV FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV)
 );
 
 CREATE TABLE DichVu (
@@ -150,4 +148,14 @@ WHERE MaKH = 1
 ----------------
 select * from account 
 
-
+select * from khachhang
+----------------
+EXEC DatPhong @NgayThue = '2023-05-15', @NgayTra = '2023-05-20', @TenPhong = N'Phòng President', @TamGia = 2100000, @MaKH = 1;
+select * from Phong
+select * from Chitietdatphong
+SELECT * FROM DATPHONGDICHVU
+----------------
+SELECT * FROM KHACHHANG;
+update KHACHHANG SET GIOITINH = 'NAM' WHERE ACCOUNTID = 1;
+SELECT * FROM KHACHHANG;
+----------------

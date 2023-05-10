@@ -67,7 +67,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(28, 43);
+            label2.Location = new Point(27, 43);
             label2.Name = "label2";
             label2.Size = new Size(188, 28);
             label2.TabIndex = 2;
@@ -83,7 +83,7 @@
             panelTitleBar.Location = new Point(200, 0);
             panelTitleBar.Margin = new Padding(3, 4, 3, 4);
             panelTitleBar.Name = "panelTitleBar";
-            panelTitleBar.Size = new Size(1062, 113);
+            panelTitleBar.Size = new Size(1064, 113);
             panelTitleBar.TabIndex = 1;
             // 
             // panel1
@@ -95,9 +95,9 @@
             panel1.Controls.Add(label2);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Right;
-            panel1.Location = new Point(762, 0);
+            panel1.Location = new Point(765, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(300, 113);
+            panel1.Size = new Size(299, 113);
             panel1.TabIndex = 10;
             // 
             // btnMinimize
@@ -137,7 +137,7 @@
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.Font = new Font("Javanese Text", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnClose.ForeColor = Color.Red;
-            btnClose.Location = new Point(260, 0);
+            btnClose.Location = new Point(257, 0);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(40, 40);
             btnClose.TabIndex = 9;
@@ -189,11 +189,11 @@
             // 
             lblTitle.Anchor = AnchorStyles.None;
             lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitle.Font = new Font("Segoe UI", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitle.ForeColor = Color.White;
-            lblTitle.Location = new Point(146, 36);
+            lblTitle.Location = new Point(147, 36);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(218, 46);
+            lblTitle.Size = new Size(212, 45);
             lblTitle.TabIndex = 7;
             lblTitle.Text = "TRANG CHỦ";
             // 
@@ -210,7 +210,7 @@
             panelMenu.Location = new Point(0, 0);
             panelMenu.Margin = new Padding(3, 4, 3, 4);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(200, 673);
+            panelMenu.Size = new Size(200, 681);
             panelMenu.TabIndex = 2;
             // 
             // infoRoom_Btn
@@ -222,10 +222,10 @@
             infoRoom_Btn.ForeColor = Color.Gainsboro;
             infoRoom_Btn.Image = Properties.Resources.beds;
             infoRoom_Btn.ImageAlign = ContentAlignment.MiddleLeft;
-            infoRoom_Btn.Location = new Point(0, 553);
+            infoRoom_Btn.Location = new Point(0, 549);
             infoRoom_Btn.Margin = new Padding(3, 4, 3, 4);
             infoRoom_Btn.Name = "infoRoom_Btn";
-            infoRoom_Btn.Size = new Size(200, 110);
+            infoRoom_Btn.Size = new Size(200, 109);
             infoRoom_Btn.TabIndex = 4;
             infoRoom_Btn.Text = "Thông tin đặt phòng";
             infoRoom_Btn.TextAlign = ContentAlignment.MiddleLeft;
@@ -242,10 +242,10 @@
             bill_Btn.ForeColor = Color.Gainsboro;
             bill_Btn.Image = Properties.Resources.bill;
             bill_Btn.ImageAlign = ContentAlignment.MiddleLeft;
-            bill_Btn.Location = new Point(0, 443);
+            bill_Btn.Location = new Point(0, 440);
             bill_Btn.Margin = new Padding(3, 4, 3, 4);
             bill_Btn.Name = "bill_Btn";
-            bill_Btn.Size = new Size(200, 110);
+            bill_Btn.Size = new Size(200, 109);
             bill_Btn.TabIndex = 2;
             bill_Btn.Text = "Thanh Toán";
             bill_Btn.TextAlign = ContentAlignment.MiddleLeft;
@@ -262,10 +262,10 @@
             dichVu_Btn.ForeColor = Color.Gainsboro;
             dichVu_Btn.Image = Properties.Resources.room_service;
             dichVu_Btn.ImageAlign = ContentAlignment.MiddleLeft;
-            dichVu_Btn.Location = new Point(0, 333);
+            dichVu_Btn.Location = new Point(0, 331);
             dichVu_Btn.Margin = new Padding(3, 4, 3, 4);
             dichVu_Btn.Name = "dichVu_Btn";
-            dichVu_Btn.Size = new Size(200, 110);
+            dichVu_Btn.Size = new Size(200, 109);
             dichVu_Btn.TabIndex = 3;
             dichVu_Btn.Text = "Các dịch vụ ";
             dichVu_Btn.TextAlign = ContentAlignment.MiddleLeft;
@@ -282,10 +282,10 @@
             datPhong_Btn.ForeColor = Color.Gainsboro;
             datPhong_Btn.Image = Properties.Resources.booking;
             datPhong_Btn.ImageAlign = ContentAlignment.MiddleLeft;
-            datPhong_Btn.Location = new Point(0, 223);
+            datPhong_Btn.Location = new Point(0, 222);
             datPhong_Btn.Margin = new Padding(3, 4, 3, 4);
             datPhong_Btn.Name = "datPhong_Btn";
-            datPhong_Btn.Size = new Size(200, 110);
+            datPhong_Btn.Size = new Size(200, 109);
             datPhong_Btn.TabIndex = 1;
             datPhong_Btn.Text = "Đặt phòng";
             datPhong_Btn.TextAlign = ContentAlignment.MiddleLeft;
@@ -305,7 +305,7 @@
             hoSo_Btn.Location = new Point(0, 113);
             hoSo_Btn.Margin = new Padding(3, 4, 3, 4);
             hoSo_Btn.Name = "hoSo_Btn";
-            hoSo_Btn.Size = new Size(200, 110);
+            hoSo_Btn.Size = new Size(200, 109);
             hoSo_Btn.TabIndex = 0;
             hoSo_Btn.Text = "Hồ sơ";
             hoSo_Btn.TextAlign = ContentAlignment.MiddleLeft;
@@ -328,7 +328,7 @@
             lblTeam.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             lblTeam.ForeColor = Color.White;
             lblTeam.ImageAlign = ContentAlignment.MiddleLeft;
-            lblTeam.Location = new Point(12, 39);
+            lblTeam.Location = new Point(11, 39);
             lblTeam.Name = "lblTeam";
             lblTeam.Size = new Size(173, 28);
             lblTeam.TabIndex = 0;
@@ -343,7 +343,6 @@
             panelDesktopPane.Name = "panelDesktopPane";
             panelDesktopPane.Size = new Size(1062, 560);
             panelDesktopPane.TabIndex = 3;
-            panelDesktopPane.Paint += panel1_Paint;
             // 
             // panel_Logo
             // 
@@ -352,7 +351,7 @@
             panel_Logo.Controls.Add(label3);
             panel_Logo.Location = new Point(285, 188);
             panel_Logo.Name = "panel_Logo";
-            panel_Logo.Size = new Size(559, 142);
+            panel_Logo.Size = new Size(559, 141);
             panel_Logo.TabIndex = 0;
             // 
             // pictureBox2
@@ -361,7 +360,7 @@
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(0, 0);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(128, 142);
+            pictureBox2.Size = new Size(128, 141);
             pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
@@ -372,7 +371,7 @@
             label3.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.Black;
             label3.ImageAlign = ContentAlignment.MiddleLeft;
-            label3.Location = new Point(134, 38);
+            label3.Location = new Point(134, 37);
             label3.Name = "label3";
             label3.Size = new Size(436, 67);
             label3.TabIndex = 1;
@@ -383,15 +382,14 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1262, 673);
+            ClientSize = new Size(1264, 681);
             Controls.Add(panelDesktopPane);
             Controls.Add(panelTitleBar);
             Controls.Add(panelMenu);
             Margin = new Padding(3, 4, 3, 4);
-            MinimumSize = new Size(1280, 720);
+            MinimumSize = new Size(1280, 718);
             Name = "iMainUI";
             Text = "TRANG CHỦ";
-            Load += iMainUI_Load;
             panelTitleBar.ResumeLayout(false);
             panelTitleBar.PerformLayout();
             panel1.ResumeLayout(false);
