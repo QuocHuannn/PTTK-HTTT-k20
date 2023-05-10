@@ -38,7 +38,7 @@ namespace PTTKHTTT
 
         private void backToUI_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -68,6 +68,12 @@ namespace PTTKHTTT
                 txtCMND.Text = cmnd;
                 txtSdt.Text = sdt;
             }
+        }
+
+        private void change_Btn_Click(object sender, EventArgs e)
+        {
+            ThayDoiTT thayDoi = new ThayDoiTT();
+            thayDoi.Show();
         }
     }
 }

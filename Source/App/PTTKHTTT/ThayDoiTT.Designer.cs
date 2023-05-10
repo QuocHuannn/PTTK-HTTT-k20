@@ -28,127 +28,180 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.CMND = new System.Windows.Forms.Label();
-            this.txtCMND = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtSdt = new System.Windows.Forms.TextBox();
-            this.Confirm = new System.Windows.Forms.Button();
-            this.Huy = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            label1 = new Label();
+            label2 = new Label();
+            txtName = new TextBox();
+            CMND = new Label();
+            txtCMND = new TextBox();
+            label4 = new Label();
+            txtSdt = new TextBox();
+            Confirm = new Button();
+            Huy = new Button();
+            Gender = new Label();
+            Address = new Label();
+            txtGender = new TextBox();
+            txtAddress = new TextBox();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(1, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 95);
-            this.panel1.TabIndex = 1;
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(1, 3);
+            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(914, 127);
+            panel1.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(265, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(268, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "THAY ĐỔI THÔNG TIN";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(303, 44);
+            label1.Name = "label1";
+            label1.Size = new Size(336, 41);
+            label1.TabIndex = 0;
+            label1.Text = "THAY ĐỔI THÔNG TIN";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(36, 132);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 21);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Tên người dùng";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(41, 153);
+            label2.Name = "label2";
+            label2.Size = new Size(161, 28);
+            label2.TabIndex = 2;
+            label2.Text = "Tên người dùng";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(220, 130);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(357, 23);
-            this.txtName.TabIndex = 18;
+            txtName.Location = new Point(251, 151);
+            txtName.Margin = new Padding(3, 4, 3, 4);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(407, 27);
+            txtName.TabIndex = 18;
             // 
             // CMND
             // 
-            this.CMND.AutoSize = true;
-            this.CMND.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CMND.Location = new System.Drawing.Point(36, 192);
-            this.CMND.Name = "CMND";
-            this.CMND.Size = new System.Drawing.Size(60, 21);
-            this.CMND.TabIndex = 19;
-            this.CMND.Text = "CMND";
+            CMND.AutoSize = true;
+            CMND.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            CMND.Location = new Point(41, 211);
+            CMND.Name = "CMND";
+            CMND.Size = new Size(74, 28);
+            CMND.TabIndex = 19;
+            CMND.Text = "CMND";
             // 
             // txtCMND
             // 
-            this.txtCMND.Location = new System.Drawing.Point(220, 190);
-            this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(357, 23);
-            this.txtCMND.TabIndex = 20;
+            txtCMND.Location = new Point(251, 213);
+            txtCMND.Margin = new Padding(3, 4, 3, 4);
+            txtCMND.Name = "txtCMND";
+            txtCMND.Size = new Size(407, 27);
+            txtCMND.TabIndex = 20;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(36, 243);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 21);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Số điện thoại";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(41, 287);
+            label4.Name = "label4";
+            label4.Size = new Size(138, 28);
+            label4.TabIndex = 21;
+            label4.Text = "Số điện thoại";
             // 
             // txtSdt
             // 
-            this.txtSdt.Location = new System.Drawing.Point(220, 241);
-            this.txtSdt.Name = "txtSdt";
-            this.txtSdt.Size = new System.Drawing.Size(357, 23);
-            this.txtSdt.TabIndex = 22;
+            txtSdt.Location = new Point(251, 284);
+            txtSdt.Margin = new Padding(3, 4, 3, 4);
+            txtSdt.Name = "txtSdt";
+            txtSdt.Size = new Size(407, 27);
+            txtSdt.TabIndex = 22;
+            txtSdt.TextChanged += txtSdt_TextChanged;
             // 
             // Confirm
             // 
-            this.Confirm.Location = new System.Drawing.Point(631, 357);
-            this.Confirm.Name = "Confirm";
-            this.Confirm.Size = new System.Drawing.Size(83, 41);
-            this.Confirm.TabIndex = 23;
-            this.Confirm.Text = "Xác nhận";
-            this.Confirm.UseVisualStyleBackColor = true;
+            Confirm.Location = new Point(725, 493);
+            Confirm.Margin = new Padding(3, 4, 3, 4);
+            Confirm.Name = "Confirm";
+            Confirm.Size = new Size(95, 55);
+            Confirm.TabIndex = 23;
+            Confirm.Text = "Xác nhận";
+            Confirm.UseVisualStyleBackColor = true;
+            Confirm.Click += Confirm_Click;
             // 
             // Huy
             // 
-            this.Huy.Location = new System.Drawing.Point(36, 357);
-            this.Huy.Name = "Huy";
-            this.Huy.Size = new System.Drawing.Size(83, 41);
-            this.Huy.TabIndex = 24;
-            this.Huy.Text = "Hủy";
-            this.Huy.UseVisualStyleBackColor = true;
+            Huy.Location = new Point(41, 493);
+            Huy.Margin = new Padding(3, 4, 3, 4);
+            Huy.Name = "Huy";
+            Huy.Size = new Size(95, 55);
+            Huy.TabIndex = 24;
+            Huy.Text = "Hủy";
+            Huy.UseVisualStyleBackColor = true;
+            Huy.Click += Huy_Click;
+            // 
+            // Gender
+            // 
+            Gender.AutoSize = true;
+            Gender.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Gender.Location = new Point(41, 353);
+            Gender.Name = "Gender";
+            Gender.Size = new Size(95, 28);
+            Gender.TabIndex = 25;
+            Gender.Text = "Giới tính";
+            // 
+            // Address
+            // 
+            Address.AutoSize = true;
+            Address.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Address.Location = new Point(41, 413);
+            Address.Name = "Address";
+            Address.Size = new Size(78, 28);
+            Address.TabIndex = 26;
+            Address.Text = "Địa chỉ";
+            // 
+            // txtGender
+            // 
+            txtGender.Location = new Point(251, 351);
+            txtGender.Margin = new Padding(3, 4, 3, 4);
+            txtGender.Name = "txtGender";
+            txtGender.Size = new Size(407, 27);
+            txtGender.TabIndex = 27;
+            // 
+            // txtAddress
+            // 
+            txtAddress.Location = new Point(251, 411);
+            txtAddress.Margin = new Padding(3, 4, 3, 4);
+            txtAddress.Name = "txtAddress";
+            txtAddress.Size = new Size(407, 27);
+            txtAddress.TabIndex = 28;
             // 
             // ThayDoiTT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Huy);
-            this.Controls.Add(this.Confirm);
-            this.Controls.Add(this.txtSdt);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtCMND);
-            this.Controls.Add(this.CMND);
-            this.Controls.Add(this.txtName);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel1);
-            this.Name = "ThayDoiTT";
-            this.Text = "ThayDoiTT";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(914, 600);
+            Controls.Add(txtAddress);
+            Controls.Add(txtGender);
+            Controls.Add(Address);
+            Controls.Add(Gender);
+            Controls.Add(Huy);
+            Controls.Add(Confirm);
+            Controls.Add(txtSdt);
+            Controls.Add(label4);
+            Controls.Add(txtCMND);
+            Controls.Add(CMND);
+            Controls.Add(txtName);
+            Controls.Add(label2);
+            Controls.Add(panel1);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "ThayDoiTT";
+            Text = "ThayDoiTT";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -163,5 +216,9 @@
         private TextBox txtSdt;
         private Button Confirm;
         private Button Huy;
+        private Label Gender;
+        private Label Address;
+        private TextBox txtGender;
+        private TextBox txtAddress;
     }
 }
