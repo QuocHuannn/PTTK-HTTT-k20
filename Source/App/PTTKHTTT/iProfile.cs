@@ -18,6 +18,8 @@ namespace PTTKHTTT
         SqlConnection _connection = null;
         SqlCommand _command = null;
         String _connectionString = "";
+
+
         public iProfile()
         {
             InitializeComponent();
@@ -38,7 +40,7 @@ namespace PTTKHTTT
 
         private void backToUI_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -68,6 +70,13 @@ namespace PTTKHTTT
                 txtCMND.Text = cmnd;
                 txtSdt.Text = sdt;
             }
+        }
+ 
+        private void changeInfo_Btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ThayDoiTT thayDoiTT = new ThayDoiTT();
+            thayDoiTT.Show();
         }
     }
 }

@@ -16,5 +16,16 @@ namespace PTTKHTTT
         {
             InitializeComponent();
         }
+
+        private void Confirm_Click(object sender, EventArgs e)
+        {
+            // Đóng form
+            this.Close();
+        }
+
+        private void Huy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
