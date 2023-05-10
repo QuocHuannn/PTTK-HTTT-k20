@@ -22,7 +22,9 @@ namespace PTTKHTTT
         public iSignIn()
         {
             InitializeComponent();
-            _connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
+            _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
+            //_connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
+
         }
 
         private void iSignIn_Load(object sender, EventArgs e)
@@ -71,7 +73,8 @@ namespace PTTKHTTT
 
         private void logIn_Btn_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection( "Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True;");
+            SqlConnection connection = new SqlConnection("Data Source=LAPTOP-V9EI97MS\\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True;");
+            //SqlConnection connection = new SqlConnection("Data Source=ANHNHANDEPTRAI\\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True;");
             connection.Open();
             string usName=userName.Text;
             string pw = passWord.Text;
