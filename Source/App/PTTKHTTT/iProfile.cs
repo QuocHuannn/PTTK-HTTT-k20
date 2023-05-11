@@ -21,8 +21,8 @@ namespace PTTKHTTT
         public iProfile()
         {
             InitializeComponent();
-            _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
-            //_connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
+            //_connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
+            _connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
 
         }
 
@@ -48,8 +48,8 @@ namespace PTTKHTTT
 
         private void iProfile_Load(object sender, EventArgs e)
         {
-            _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
-            //_connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
+          //  _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
+            _connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
             _connection = new SqlConnection(_connectionString);
             _connection.Open();
             string query = "select HoTen, CMND, Sdt,ID,DiaChi,GioiTinh from KhachHang,Account where  AccountID  = ID";
