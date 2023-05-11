@@ -11,9 +11,8 @@ namespace PTTKHTTT
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            // Application.Run(new iSignIn());
-           // Application.Run(new iReserve());
-            Application.Run(new iMainUI());
+            Application.Run(new iSignIn());
+            //Application.Run(new iMainUI());
             
         }
     }
