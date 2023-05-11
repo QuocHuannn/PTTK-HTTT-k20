@@ -28,8 +28,8 @@ namespace PTTKHTTT
 
         private void thanhToan_Btn_Click(object sender, EventArgs e)
         {
-            //SqlConnection connection = new SqlConnection("Data Source=LAPTOP-V9EI97MS\\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True;");
-            SqlConnection connection = new SqlConnection("Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True;");
+            SqlConnection connection = new SqlConnection("Data Source=LAPTOP-V9EI97MS\\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True;");
+            //SqlConnection connection = new SqlConnection("Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True;");
             connection.Open();
             string getIdBill = txtHoaDon.Text;
             int result = Int32.Parse(getIdBill);
@@ -47,8 +47,8 @@ namespace PTTKHTTT
 
         private void find_btn_Click(object sender, EventArgs e)
         {
-            //  _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
-            _connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
+            _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
+            //_connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
             _connection = new SqlConnection(_connectionString);
             _connection.Open();
             string getIdBill = txtHoaDon.Text;

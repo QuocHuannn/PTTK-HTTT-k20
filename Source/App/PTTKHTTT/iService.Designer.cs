@@ -37,7 +37,6 @@
             label4 = new Label();
             infoService_dataGridView = new DataGridView();
             confirm_Btn = new Button();
-            button5 = new Button();
             xoaTT_Btn = new Button();
             addedService_dataGridView = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)infoByName_dataGridView).BeginInit();
@@ -144,26 +143,14 @@
             // 
             confirm_Btn.Anchor = AnchorStyles.None;
             confirm_Btn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            confirm_Btn.Location = new Point(784, 429);
+            confirm_Btn.Location = new Point(634, 429);
             confirm_Btn.Margin = new Padding(3, 4, 3, 4);
             confirm_Btn.Name = "confirm_Btn";
-            confirm_Btn.Size = new Size(264, 31);
+            confirm_Btn.Size = new Size(414, 31);
             confirm_Btn.TabIndex = 5;
             confirm_Btn.Text = "Xác nhận";
             confirm_Btn.UseVisualStyleBackColor = true;
             confirm_Btn.Click += confirm_Btn_Click;
-            // 
-            // button5
-            // 
-            button5.Anchor = AnchorStyles.None;
-            button5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.Location = new Point(634, 429);
-            button5.Margin = new Padding(3, 4, 3, 4);
-            button5.Name = "button5";
-            button5.Size = new Size(134, 31);
-            button5.TabIndex = 7;
-            button5.Text = "Quay lại";
-            button5.UseVisualStyleBackColor = true;
             // 
             // xoaTT_Btn
             // 
@@ -202,7 +189,6 @@
             Controls.Add(label3);
             Controls.Add(addedService_dataGridView);
             Controls.Add(infoByName_dataGridView);
-            Controls.Add(button5);
             Controls.Add(xoaTT_Btn);
             Controls.Add(confirm_Btn);
             Controls.Add(infoService_dataGridView);
@@ -228,7 +214,6 @@
         private Label label4;
         private DataGridView infoService_dataGridView;
         private Button confirm_Btn;
-        private Button button5;
         private Button xoaTT_Btn;
         private DataGridView addedService_dataGridView;
     }

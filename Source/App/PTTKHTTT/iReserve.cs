@@ -45,7 +45,8 @@ namespace PTTKHTTT
             // Tạo câu lệnh SQL để lấy thông tin chi tiết của dịch vụ dựa trên tên dịch vụ
             string sql = "SELECT TenPhong, LoaiPhong,GiaPhong FROM Phong WHERE TenPhong = N'"+tenPhong+"' and TrangThai=N'Trống'";
             // Tạo đối tượng SqlConnection để kết nối đến cơ sở dữ liệu
-            using (SqlConnection connection = new SqlConnection(@"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True"))
+            //using (SqlConnection connection = new SqlConnection(@"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True"))
             {
                 // Mở kết nối đến cơ sở dữ liệu
                 connection.Open();
@@ -76,8 +77,8 @@ namespace PTTKHTTT
 
         private void reserve_btn_Click(object sender, EventArgs e)
         {
-            _connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
-           // _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
+            //_connectionString = @"Data Source=ANHNHANDEPTRAI;Initial Catalog=QLKhachSan;Integrated Security=True";
+            _connectionString = @"Data Source=LAPTOP-V9EI97MS\SQLEXPRESS;Initial Catalog=QLKhachSan;Integrated Security=True";
             _connection = new SqlConnection(_connectionString);
             _connection.Open();
 

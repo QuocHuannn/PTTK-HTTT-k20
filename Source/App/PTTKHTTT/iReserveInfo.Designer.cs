@@ -29,20 +29,19 @@
         private void InitializeComponent()
         {
             label2 = new Label();
-            textBox1 = new TextBox();
+            ma_txt = new TextBox();
             label3 = new Label();
-            label4 = new Label();
             label5 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            name_txt = new TextBox();
+            phong_txt = new TextBox();
             panel2 = new Panel();
-            dataGridView1 = new DataGridView();
+            dichVuGrid = new DataGridView();
             label6 = new Label();
-            button1 = new Button();
-            button2 = new Button();
+            findReser_Btn = new Button();
+            sdt_txt = new TextBox();
+            label4 = new Label();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dichVuGrid).BeginInit();
             SuspendLayout();
             // 
             // label2
@@ -56,14 +55,14 @@
             label2.TabIndex = 1;
             label2.Text = "Mã đơn";
             // 
-            // textBox1
+            // ma_txt
             // 
-            textBox1.Anchor = AnchorStyles.None;
-            textBox1.Location = new Point(184, 98);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(283, 27);
-            textBox1.TabIndex = 2;
+            ma_txt.Anchor = AnchorStyles.None;
+            ma_txt.Location = new Point(184, 98);
+            ma_txt.Margin = new Padding(3, 4, 3, 4);
+            ma_txt.Name = "ma_txt";
+            ma_txt.Size = new Size(283, 27);
+            ma_txt.TabIndex = 2;
             // 
             // label3
             // 
@@ -76,17 +75,6 @@
             label3.TabIndex = 3;
             label3.Text = "Tên người đặt";
             // 
-            // label4
-            // 
-            label4.Anchor = AnchorStyles.None;
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(11, 240);
-            label4.Name = "label4";
-            label4.Size = new Size(138, 28);
-            label4.TabIndex = 4;
-            label4.Text = "Số điện thoại";
-            // 
             // label5
             // 
             label5.Anchor = AnchorStyles.None;
@@ -98,53 +86,44 @@
             label5.TabIndex = 5;
             label5.Text = "Số phòng";
             // 
-            // textBox2
+            // name_txt
             // 
-            textBox2.Anchor = AnchorStyles.None;
-            textBox2.Location = new Point(184, 168);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(283, 27);
-            textBox2.TabIndex = 7;
+            name_txt.Anchor = AnchorStyles.None;
+            name_txt.Location = new Point(184, 168);
+            name_txt.Margin = new Padding(3, 4, 3, 4);
+            name_txt.Name = "name_txt";
+            name_txt.Size = new Size(283, 27);
+            name_txt.TabIndex = 7;
             // 
-            // textBox3
+            // phong_txt
             // 
-            textBox3.Anchor = AnchorStyles.None;
-            textBox3.Location = new Point(184, 241);
-            textBox3.Margin = new Padding(3, 4, 3, 4);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(283, 27);
-            textBox3.TabIndex = 8;
-            // 
-            // textBox4
-            // 
-            textBox4.Anchor = AnchorStyles.None;
-            textBox4.Location = new Point(184, 313);
-            textBox4.Margin = new Padding(3, 4, 3, 4);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(283, 27);
-            textBox4.TabIndex = 9;
+            phong_txt.Anchor = AnchorStyles.None;
+            phong_txt.Location = new Point(184, 313);
+            phong_txt.Margin = new Padding(3, 4, 3, 4);
+            phong_txt.Name = "phong_txt";
+            phong_txt.Size = new Size(283, 27);
+            phong_txt.TabIndex = 9;
             // 
             // panel2
             // 
             panel2.Anchor = AnchorStyles.None;
-            panel2.Controls.Add(dataGridView1);
+            panel2.Controls.Add(dichVuGrid);
             panel2.Location = new Point(515, 97);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
             panel2.Size = new Size(533, 321);
             panel2.TabIndex = 11;
             // 
-            // dataGridView1
+            // dichVuGrid
             // 
-            dataGridView1.Anchor = AnchorStyles.None;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(533, 321);
-            dataGridView1.TabIndex = 0;
+            dichVuGrid.Anchor = AnchorStyles.None;
+            dichVuGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dichVuGrid.Location = new Point(0, 0);
+            dichVuGrid.Name = "dichVuGrid";
+            dichVuGrid.RowHeadersWidth = 51;
+            dichVuGrid.RowTemplate.Height = 29;
+            dichVuGrid.Size = new Size(533, 321);
+            dichVuGrid.TabIndex = 0;
             // 
             // label6
             // 
@@ -157,70 +136,76 @@
             label6.TabIndex = 12;
             label6.Text = "DỊCH VỤ KÈM THEO";
             // 
-            // button1
+            // findReser_Btn
             // 
-            button1.Anchor = AnchorStyles.None;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(11, 387);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(145, 31);
-            button1.TabIndex = 13;
-            button1.Text = "Quay lại";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            findReser_Btn.Anchor = AnchorStyles.None;
+            findReser_Btn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            findReser_Btn.Location = new Point(184, 387);
+            findReser_Btn.Name = "findReser_Btn";
+            findReser_Btn.Size = new Size(283, 31);
+            findReser_Btn.TabIndex = 15;
+            findReser_Btn.Text = "Tìm kiếm";
+            findReser_Btn.UseVisualStyleBackColor = true;
+            findReser_Btn.Click += findReser_Btn_Click;
             // 
-            // button2
+            // sdt_txt
             // 
-            button2.Anchor = AnchorStyles.None;
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(184, 387);
-            button2.Name = "button2";
-            button2.Size = new Size(283, 31);
-            button2.TabIndex = 15;
-            button2.Text = "Tìm kiếm";
-            button2.UseVisualStyleBackColor = true;
+            sdt_txt.Anchor = AnchorStyles.None;
+            sdt_txt.Location = new Point(184, 241);
+            sdt_txt.Margin = new Padding(3, 4, 3, 4);
+            sdt_txt.Name = "sdt_txt";
+            sdt_txt.Size = new Size(283, 27);
+            sdt_txt.TabIndex = 8;
+            // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.None;
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(11, 240);
+            label4.Name = "label4";
+            label4.Size = new Size(138, 28);
+            label4.TabIndex = 4;
+            label4.Text = "Số điện thoại";
             // 
             // iReserveInfo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1060, 561);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(findReser_Btn);
             Controls.Add(label6);
             Controls.Add(panel2);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            Controls.Add(phong_txt);
+            Controls.Add(sdt_txt);
+            Controls.Add(name_txt);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(textBox1);
+            Controls.Add(ma_txt);
             Controls.Add(label2);
             Margin = new Padding(3, 4, 3, 4);
             Name = "iReserveInfo";
             Text = "THÔNG TIN ĐẶT PHÒNG";
             Load += iReserveInfo_Load;
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dichVuGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private Label label2;
-        private TextBox textBox1;
+        private TextBox ma_txt;
         private Label label3;
-        private Label label4;
         private Label label5;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox name_txt;
+        private TextBox phong_txt;
         private Panel panel2;
         private Label label6;
-        private Button button1;
-        private DataGridView dataGridView1;
-        private Button button2;
+        private DataGridView dichVuGrid;
+        private Button findReser_Btn;
+        private TextBox sdt_txt;
+        private Label label4;
     }
 }
