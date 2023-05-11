@@ -33,6 +33,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtHoaDon = new System.Windows.Forms.TextBox();
             this.thanhToan_Btn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.paymentStatus = new System.Windows.Forms.TextBox();
+            this.find_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,11 +84,41 @@
             this.thanhToan_Btn.UseVisualStyleBackColor = true;
             this.thanhToan_Btn.Click += new System.EventHandler(this.thanhToan_Btn_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(22, 189);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 21);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Tình trạng";
+            // 
+            // paymentStatus
+            // 
+            this.paymentStatus.Location = new System.Drawing.Point(172, 191);
+            this.paymentStatus.Name = "paymentStatus";
+            this.paymentStatus.Size = new System.Drawing.Size(357, 23);
+            this.paymentStatus.TabIndex = 21;
+            // 
+            // find_btn
+            // 
+            this.find_btn.Location = new System.Drawing.Point(56, 325);
+            this.find_btn.Name = "find_btn";
+            this.find_btn.Size = new System.Drawing.Size(83, 41);
+            this.find_btn.TabIndex = 22;
+            this.find_btn.Text = "Tìm";
+            this.find_btn.UseVisualStyleBackColor = true;
+            this.find_btn.Click += new System.EventHandler(this.find_btn_Click);
+            // 
             // iPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.find_btn);
+            this.Controls.Add(this.paymentStatus);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.thanhToan_Btn);
             this.Controls.Add(this.txtHoaDon);
             this.Controls.Add(this.label2);
@@ -106,5 +139,8 @@
         private Label label2;
         private TextBox txtHoaDon;
         private Button thanhToan_Btn;
+        private Label label3;
+        private TextBox paymentStatus;
+        private Button find_btn;
     }
 }
