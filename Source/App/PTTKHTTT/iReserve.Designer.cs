@@ -29,16 +29,15 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.pickStart = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.pickEnd = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.searchDataGrid = new System.Windows.Forms.DataGridView();
+            this.reserve_btn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.searchDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -52,12 +51,12 @@
             this.label1.Text = "Từ ngày";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // dateTimePicker1
+            // pickStart
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(102, 22);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 1;
+            this.pickStart.Location = new System.Drawing.Point(102, 22);
+            this.pickStart.Name = "pickStart";
+            this.pickStart.Size = new System.Drawing.Size(200, 23);
+            this.pickStart.TabIndex = 1;
             // 
             // label2
             // 
@@ -69,12 +68,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Đến ngày";
             // 
-            // dateTimePicker2
+            // pickEnd
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(102, 60);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker2.TabIndex = 3;
+            this.pickEnd.Location = new System.Drawing.Point(102, 60);
+            this.pickEnd.Name = "pickEnd";
+            this.pickEnd.Size = new System.Drawing.Size(200, 23);
+            this.pickEnd.TabIndex = 3;
             // 
             // label3
             // 
@@ -82,62 +81,61 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(331, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 21);
+            this.label3.Size = new System.Drawing.Size(82, 21);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Loại phòng";
+            this.label3.Text = "Tên phòng";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Phòng đơn",
+            "Phòng đôi",
+            "Phòng view đẹp",
+            "Phòng gia đình",
+            "Phòng suit",
+            "Phòng President"});
             this.comboBox1.Location = new System.Drawing.Point(436, 22);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 5;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // label5
+            // searchDataGrid
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(573, 24);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 21);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Tầm giá";
+            this.searchDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.searchDataGrid.Location = new System.Drawing.Point(0, 159);
+            this.searchDataGrid.Name = "searchDataGrid";
+            this.searchDataGrid.RowTemplate.Height = 25;
+            this.searchDataGrid.Size = new System.Drawing.Size(805, 295);
+            this.searchDataGrid.TabIndex = 10;
             // 
-            // comboBox3
+            // reserve_btn
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(657, 24);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 23);
-            this.comboBox3.TabIndex = 9;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 159);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(805, 295);
-            this.dataGridView1.TabIndex = 10;
+            this.reserve_btn.Location = new System.Drawing.Point(436, 75);
+            this.reserve_btn.Name = "reserve_btn";
+            this.reserve_btn.Size = new System.Drawing.Size(83, 41);
+            this.reserve_btn.TabIndex = 15;
+            this.reserve_btn.Text = "Đặt phòng";
+            this.reserve_btn.UseVisualStyleBackColor = true;
+            this.reserve_btn.Click += new System.EventHandler(this.reserve_btn_Click);
             // 
             // iReserve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.reserve_btn);
+            this.Controls.Add(this.searchDataGrid);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.pickEnd);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.pickStart);
             this.Controls.Add(this.label1);
             this.Name = "iReserve";
             this.Text = "iReserve";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,14 +144,13 @@
         #endregion
 
         private Label label1;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker pickStart;
         private Label label2;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker pickEnd;
         private Label label3;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private ComboBox comboBox1;
-        private Label label5;
-        private ComboBox comboBox3;
-        private DataGridView dataGridView1;
+        private DataGridView searchDataGrid;
+        private Button reserve_btn;
     }
 }
