@@ -64,7 +64,7 @@ CREATE TABLE DatPhongDichVu (
 CREATE TABLE HoaDon (
    MaHoaDon INT IDENTITY(1,1) PRIMARY KEY,
    MaDatPhong INT NOT NULL,
-   TongTien FLOAT NOT NULL,
+   TongTien FLOAT,
    NgayIn DATE NOT NULL,
    CONSTRAINT FK_HoaDon_MaDatPhong FOREIGN KEY (MaDatPhong) REFERENCES ChiTietDatPhong(MaDatPhong)
 );
