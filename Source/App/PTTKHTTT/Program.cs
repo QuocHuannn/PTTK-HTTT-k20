@@ -12,8 +12,8 @@ namespace PTTKHTTT
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             // Application.Run(new iSignIn());
-            Application.Run(new iReserve());
-            //Application.Run(new iMainUI());
+           // Application.Run(new iReserve());
+            Application.Run(new iMainUI());
             
         }
     }
