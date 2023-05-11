@@ -199,21 +199,7 @@ CREATE PROCEDURE DatPhong
   @MaKH INT
 AS
 BEGIN
-  -- Tìm phòng phù hợp với loại phòng và tầm giá tiền thuê
-  DECLARE @MaPhong INT;
-  SELECT TOP 1 @MaPhong = MaPhong
-  FROM Phong
-  WHERE TenPhong = @TenPhong AND GiaPhong <= @TamGia AND TrangThai = N'Trống'
-  ORDER BY GiaPhong ASC;
-
-  -- Nếu không tìm thấy phòng phù hợp, thông báo không có phòng khả dụng
-  IF @MaPhong IS NULL
-  BEGIN
-    RAISERROR(N'Không có phòng khả dụng cho loại phòng và tầm giá tiền thuê đã chọn.', 16, 1);
-    RETURN;
-  END;
-
-  -- Thực hiện việc đặt phòng
+   -- Thực hiện việc đặt phòng
   BEGIN TRY
     BEGIN TRANSACTION;
 
