@@ -159,3 +159,10 @@ SELECT * FROM KHACHHANG;
 update KHACHHANG SET GIOITINH = 'NAM' WHERE ACCOUNTID = 1;
 SELECT * FROM KHACHHANG;
 ----------------
+select * from KHACHHANG
+SELECT * FROM CHITIETDATPHONG
+SELECT * FROM HOADON
+select * from phong
+select * from DatPhongDichVu
+
+select HoTen, Sdt, HD.MaDatPhong from KhachHang AS KH, ChiTietDatPhong AS CT, HOADON AS HD where  KH.MaKH  = CT.MaKH AND HD.MaHoaDon = 1;

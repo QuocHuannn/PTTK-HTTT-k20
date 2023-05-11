@@ -62,9 +62,8 @@ BEGIN
     UPDATE HoaDon SET TongTien = TongTien + @TongTien WHERE MaDatPhong = @MaDatPhong
 END
 ------- Hóa Đơn
-CREATE PROCEDURE TinhHoaDon
-    @MaDatPhong INT,
-    @MaNV INT
+CREATE OR ALTER PROCEDURE TinhHoaDon
+    @MaDatPhong INT
 AS
 BEGIN
     DECLARE @TongTien FLOAT
@@ -90,7 +89,7 @@ BEGIN
     SET DaThanhToan = 1
     WHERE MaDatPhong = @MaDatPhong
 
-    SELECT @MaHoaDon AS 'MaHoaDon', @TongTien AS 'TongTien', @NgayIn AS 'NgayIn', @MaNV AS 'MaNV', @MaDatPhong AS 'MaDatPhong'
+    SELECT @MaHoaDon AS 'MaHoaDon', @TongTien AS 'TongTien', @NgayIn AS 'NgayIn', @MaDatPhong AS 'MaDatPhong'
 END
 	
 ---- check đăng nhập
